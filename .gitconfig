@@ -1,0 +1,11 @@
+[user]
+	name = Julien
+	email = juliencaron@protonmail.com
+[core]
+	editor = code --wait
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[pull]
+	rebase = true
