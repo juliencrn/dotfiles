@@ -40,15 +40,15 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # # Customise the Powerlevel9k prompts
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-#   dir
-#   custom_javascript 
-#   vcs
-#   newline
-#   status
-# )
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-# POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+  dir
+  custom_javascript 
+  vcs
+  newline
+  status
+)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -110,7 +110,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # plugins=(cp git node nvm npx npm vscode zsh-syntax-highlighting)
 # plugins=(aws cp django docker gatsby git heroku node nvm npx npm pip postgres python vagrant vscode yarn)
 
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
