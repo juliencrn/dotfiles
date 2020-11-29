@@ -10,20 +10,35 @@ general {
   color_bad = "#FF5555"
 }
 
+order += "volume master"
 order += "tztime paris"
 order += "path_exists VPN"
 order += "cpu_usage 0"
 order += "memory"
+# order += "disk /"
 order += "ethernet _first_"
 
+volume master {
+format = "  %volume" 
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
+	# termsyn font
+}
+
 cpu_usage {
-  format = "CPU: %usage"
+  format= "CPU: %usage"
+  max_threshold= 75
 }
 
 memory {
-  format = "RAM: %used/16 GiB"
+  format = "RAM: %percentage_used"
   threshold_degraded = "10%"
   format_degraded = "MEMORY: %free"
+}
+
+disk "/" {
+  format = "SSD: %percentage_used"
 }
 
 ethernet _first_ {
