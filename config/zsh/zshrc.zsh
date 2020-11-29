@@ -18,6 +18,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# Dracula color scheme
+# eval `dircolors ~/dir_colors/dircolors`
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -43,9 +46,10 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 alias ls="ls --color=auto"
 alias svim="sudo vim"
-alias update="sh ~/dotfiles/clean-ubuntu.sh"
+alias update="sh ~/dotfiles/scripts/clean-ubuntu.sh"
 alias myip="curl http://ipecho.net/plain; echo"
 alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
+alias refresh="sh ~/dotfiles/scripts/refresh-symlinks.sh"
 alias reload="source ~/.zshrc"
 
 # You may need to manually set your language environment

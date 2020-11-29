@@ -7,12 +7,13 @@
 - [FZF](#fzf) (Fuzzy Finder)
 - [Oh-my-zsh](#oh-my-zsh)
 - [VIM](#vim)
+- [i3](#i3) I3 Windows manager
 
 ## System dependencies
 
 ```zsh
 sudo apt update
-sudo apt -y zsh fzf git curl wget nvim nvm gnome-sushi snapd
+sudo apt -y zsh fzf git curl wget nvim nvm gnome-sushi snapd dconf-cli
 sudo snap install brave code spotify vlc docker insomnia
 
 # TODO: Duplicated, I can remove this one ?
@@ -52,6 +53,11 @@ git clone --depth 1 https://github.com/dracula/gtk.git ~/.themes/Dracula
 gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
 gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
 gsettings set org.gnome.desktop.interface icon-theme "Yaru"
+
+# Gnome-terminal
+git clone https://github.com/dracula/gnome-terminal ~/.gnome-terminal
+cd ~/.gnome-terminal
+./install.sh
 ```
 
 ## FZF 
@@ -74,3 +80,15 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
+
+# I3
+
+I3 is a tiny windows manager
+```zsh
+sudo apt install i3
+```
+
+Make sure have "exec i3" in your `~/.xsessionrc`.
+
+
+https://draculatheme.com/insomnia/
