@@ -22,6 +22,9 @@ bindsym XF86AudioLowerVolume    exec --no-startup-id amixer -q -D pulse sset Mas
 bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer -q -D pulse sset Master 5%+ unmute
 bindsym XF86AudioMute           exec --no-startup-id amixer -q -D pulse sset Master toggle
 
+# Take screenshots with maim (MAke IMage)
+bindsym $mod+p exec "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 ~/Pictures/Screenshot-$(date -Iseconds | cut -d'+' -f1).png"
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 #floating_modifier $mod
 
@@ -49,10 +52,10 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
-# bindsym $mod+y split h
+bindsym $mod+y split h
 
 # split in vertical orientation
-# bindsym $mod+x split v
+bindsym $mod+x split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -198,7 +201,7 @@ gaps inner 20
 
 # Startup applications
 exec --no-startup-id gnome-settings-daemon
-# exec --no-startup-id gnome-sound-applet
+exec --no-startup-id gnome-sound-applet
 exec_always --no-startup-id pulseaudio --start
 exec_always --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-0 --off --output DP-1 --off --output HDMI-1 --mode 1920x1080 --pos 3840x0 --rotate normal --output HDMI-2 --mode 1920x1080 --pos 0x0 --rotate normal
 
