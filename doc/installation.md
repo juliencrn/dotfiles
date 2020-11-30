@@ -13,7 +13,7 @@
 
 ```zsh
 sudo apt update
-sudo apt -y zsh fzf git curl wget nvim nvm gnome-sushi snapd dconf-cli
+sudo apt -y zsh fzf git curl wget nvim nvm gnome-sushi snapd dconf-cli maim pulseaudio alsa
 sudo snap install brave code spotify vlc docker insomnia
 
 # TODO: Duplicated, I can remove this one ?
