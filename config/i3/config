@@ -13,6 +13,7 @@ set $mod Mod4
 #######################################################
 
 # Dracula colors
+set $black #000000
 set $bg #282a36
 set $active #44475a
 set $white #f8f8f2
@@ -126,11 +127,9 @@ bindsym $mod+r mode "resize"
 #######################################################
 
 bar {
-	# Run Polybar
-	# i3bar_command $HOME/.config/polybar/launch.sh
-	
 	# For the default i3 status bar information
-        status_command i3status
+        # status_command i3status
+        status_command py3status -c ~/.config/i3status/config
 
         # The nproc command will be executed and the result will be 
         # shown on the right side of the i3bar. You can add custom shell
@@ -138,25 +137,16 @@ bar {
         # status_command exec /usr/bin/nproc
 
         # The next two lines are for the font that I am using
-        # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-        font pango:Fira Code 12
+        font pango:Fira Code 11
 
         # I want by i3bar to be at the top rather than the bottom
         position top
 
-        # The next section is for the i3bar colors and transparency
-        # i3bar uses the RGBA format for color specification where the A
-        # is for the opacity (which is optional). 
-        # The RGBA string will be hexadecimal; so #[__][__][__][__]
-        # i3bar_command i3bar --transparency
+        separator_symbol        "|"
+        workspace_buttons       no
 
-       
-        separator_symbol        "·"
-
-	# Dracula colors
 	colors {
-	   # background $bg
-	    background #000000 
+	    background $black 
 	    statusline $white
 	    separator  $active
 
@@ -190,8 +180,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
-
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # TODO: The two following rules are identical ?
 exec /usr/libexec/gnome-settings-daemon

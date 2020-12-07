@@ -13,7 +13,7 @@
 
 ```zsh
 sudo apt update
-sudo apt -y zsh fzf git curl wget nvim nvm gnome-sushi snapd dconf-cli maim pulseaudio alsa
+sudo apt -y zsh i3 i3lock hsetroot fzf git curl wget nvim nvm gnome-sushi snapd dconf-cli maim pulseaudio alsa py3status
 sudo snap install brave code spotify vlc docker insomnia
 
 # TODO: Duplicated, I can remove this one ?
@@ -87,8 +87,6 @@ I3 is a tiny windows manager
 ```zsh
 sudo apt install i3
 ```
-
-Make sure have "exec i3" in your `~/.xsessionrc`.
 
 
 https://draculatheme.com/insomnia/
