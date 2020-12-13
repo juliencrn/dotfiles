@@ -65,8 +65,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+q kill
 
-# start Rofi (a program launcher - ex dmenu)
-bindsym $mod+d exec "rofi -combi-modi window,drun -show combi"
+# start Dmenu
+bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '$black' -sb '$green' -sf '$black' -fn 'Fira Code-10' -p 'dmenu%'"
 
 # Open applications shortcuts
 bindsym $mod+b exec "brave-browser"

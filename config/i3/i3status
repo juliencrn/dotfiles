@@ -81,24 +81,6 @@ whatismyip {
 # Not Activated modules
 #######################################################
 
-coin_market {
-    format_coin = "[\?color=name {name}] "
-    format_coin += "[\?color=symbol {symbol}] ${usd_price:.2f} "
-    format_coin += "[\?color=usd_percent_change_24h {usd_percent_change_24h}%]"
-    markets = ["btc", "eth"]
-    thresholds = {
-        "name": [
-            ("Bitcoin", "greenyellow"),
-            ("Ethereum", "deepskyblue"),
-        ],
-        "symbol": [
-            ("BTC", "darkgray"),
-            ("ETH", "darkgray"),
-        ],
-        "usd_percent_change_24h": [(-100, "bad"), (0, "good")],
-    }
-}
-
 disk "/" {
   format = "SSD: %percentage_used"
 }
