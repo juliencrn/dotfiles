@@ -1,20 +1,18 @@
 echo "Clean-up"
 rm -rf \
     ~/.gitconfig \
-    ~/.zshrc \
-    ~/.fzf.zsh \
-    ~/.fzf.bash \
-    ~/.p10k.fzf \
-    ~/.zshenv \
+    ~/.xinitrc \
+    ~/.xsessionrc \
+    ~/.Xresources \
     ~/.config/nvim/init.vim \
     ~/.config/nvim/coc-settings.json \
+    ~/.zshrc \
+    ~/.fzf.zsh \
+    ~/.p10k.fzf \
+    ~/.zshenv \
     ~/.config/i3/config \
-    ~/.config/i3blocks/config \
-    ~/.config/i3status/config \
-    ~/.config/rofi/* \
-    ~/.xsessionrc \
-    ~/.xinitrc \
-    ~/.Xresources
+    ~/.config/i3status/config
+    # ~/.config/rofi/*
 
 echo "Set up symlinks"
 
@@ -37,13 +35,11 @@ ln -sv ~/dotfiles/config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 # i3
 mkdir -p ~/.config/i3
 mkdir -p ~/.config/i3status
-mkdir -p ~/.config/i3blocks
 ln -sv ~/dotfiles/config/i3/config ~/.config/i3/config
 ln -sv ~/dotfiles/config/i3/i3status ~/.config/i3status/config
-ln -sv ~/dotfiles/config/i3/i3blocks ~/.config/i3blocks/config
 
 # Rofi
-mkdir -p ~/.config/rofi
-cp -r ~/dotfiles/config/rofi/* ~/.config/rofi
+# mkdir -p ~/.config/rofi
+# cp -r ~/dotfiles/config/rofi/* ~/.config/rofi
 
 echo "done"
