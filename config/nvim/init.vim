@@ -1,4 +1,3 @@
-"    _   ____________ _    ________  ___
 "   / | / / ____/ __ \ |  / /  _/  |/  /
 "  /  |/ / __/ / / / / | / // // /|_/ / 
 " / /|  / /___/ /_/ /| |/ // // /  / /  
@@ -20,8 +19,6 @@ set autowrite
 
 " Disable swapfiles too
 set noswapfile
-
-
 
 " Show line number
 set number
@@ -79,21 +76,15 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Toggle
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 
-" TERMINAL INTEGRATED
-" TODO: I can't close the Term
-" open new split panes to right and below
-set splitright
-set splitbelow
-" turn terminal to normal mode with escape
-tnoremap <Esc> <C-\><C-n>
-" start terminal in insert mode
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-" open terminal on ctrl+n
-function! OpenTerminal()
-  split term://bash
-  resize 10
-endfunction
-nnoremap <c-n> :call OpenTerminal()<CR>
+" peitalin/vim-jsx-typescript
+" set filetypes as typescriptreact
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+
+" Typescriptreact as typescript type
+augroup SyntaxSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+augroup END
 
 " use alt+hjkl to move between split/vsplit panels
 tnoremap <A-h> <C-\><C-n><C-w>h
@@ -118,27 +109,12 @@ let g:fzf_action = {
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " Make Vim as smart as VSCode
-  " Language
-  "Tools
-  "\ 'coc-prettier', 
-  "\ 'coc-eslint',
-let g:coc_global_extensions = [
-  \ 'coc-html', 
-  \ 'coc-css', 
-  \ 'coc-json', 
-  \ 'coc-tsserver', " .jsconfig required for js project
-  \ 'coc-svg',
-  \ 'coc-yaml',
-  \ 'coc-emmet',
-  \ 'coc-highlight', " highlight hex, rgb
-  \ 'coc-stylelint',
-  \ 'coc-spell-checker'
-  \]
+let g:coc_global_extensions = ['coc-html', 'coc-css', 'coc-json', 'coc-tsserver', 'coc-svg', 'coc-yaml', 'coc-emmet', 'coc-highlight', 'coc-stylelint', 'coc-spell-checker']
 
-" if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-"   let g:coc_global_extensions += ['coc-prettier']
-" endif
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
 
-" if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
-"   let g:coc_global_extensions += ['coc-eslint']
-" endif
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif

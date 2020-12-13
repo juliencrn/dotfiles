@@ -20,9 +20,19 @@ call plug#begin("~/.vim/plugged")
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
 
+    " JS/TS Syntax
+    Plug 'pangloss/vim-javascript'
+    Plug 'leafgarland/typescript-vim'
+    Plug 'peitalin/vim-jsx-typescript'
+    Plug 'herringtondarkholme/yats.vim'
+    Plug 'maxmellon/vim-jsx-pretty'
+    Plug 'jparise/vim-graphql'
+
     "VSCode Intellisence
     Plug 'neoclide/coc.nvim', { 'branch': 'release' }
     Plug 'kevinoid/vim-jsonc' " TODO: Worked ?
     Plug 'leafgarland/typescript-vim' " TODO: Needed ?
     Plug 'peitalin/vim-jsx-typescript' " TODO: Needed ?
 call plug#end()
+
+
