@@ -10,6 +10,8 @@ general {
   color_bad = "#FF5555"
 }
 
+order += "taskwarrior"
+order += "xscreensaver"
 order += "tztime paris"
 order += "volume master"
 order += "spotify"
@@ -30,6 +32,12 @@ order += "whatismyip"
 #######################################################
 # Activated modules
 #######################################################
+
+taskwarrior {
+  filter = "status:pending"
+  # format = "Tasks({tasks}) {descriptions}"
+  format = "[\?if=tasks  |No tasks] {descriptions}"
+}
 
 tztime paris {
   format = " %H:%M:%S - %d/%m/%Y"
