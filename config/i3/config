@@ -52,6 +52,9 @@ font pango: Fira Code 10
 bindsym XF86AudioLowerVolume    exec --no-startup-id amixer -q -D pulse sset Master 5%- unmute
 bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer -q -D pulse sset Master 5%+ unmute
 bindsym XF86AudioMute           exec --no-startup-id amixer -q -D pulse sset Master toggle
+
+bindsym $mod+minus exec --no-startup-id amixer -q -D pulse sset Master 5%- unmute
+bindsym $mod+equal exec --no-startup-id amixer -q -D pulse sset Master 5%+ unmute
 # bindsym XF86AudioPlay exec playerctl play-pause 
 # bindsym XF86AudioNext exec playerctl next
 # bindsym XF86AudioPrev exec playerctl previous
@@ -63,7 +66,7 @@ bindsym $mod+p exec "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 ~/Downloads/Scree
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+q kill
+bindsym $mod+Shift+q kill
 
 # start Dmenu
 bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '$black' -sb '$green' -sf '$black' -fn 'Fira Code-10' -p 'dmenu%'"
