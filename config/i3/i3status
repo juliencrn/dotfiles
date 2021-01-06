@@ -36,7 +36,7 @@ order += "whatismyip"
 taskwarrior {
   filter = "status:pending"
   # format = "Tasks({tasks}) {descriptions}"
-  format = "[\?if=tasks  |No tasks] {descriptions}"
+  format = "[\?if=tasks  Tasks: {tasks}|No tasks]"
 }
 
 tztime paris {
