@@ -7,63 +7,43 @@
 " Plugins
 source ~/dotfiles/config/nvim/config/plugins.vim
 
-" Enable filetype detection for plugins and indentation 
-filetype plugin indent on
-  
-" Reload a file when it is changed from the outside
-set autoread
+" From "Mastering Vim Quickly" book
+set nocompatible          " Use Vim settings, rather than Vi settings
+set softtabstop=2         " Indent by 2 spaces when hitting tab
+set shiftwidth=2          " Indent by 2 spaces when auto-indenting
+set tabstop=2             " Show existing tab with 2 space width
+syntax enable             " Enable syntax highlighting
+filetype plugin indent on " Enable indenting for plugins and files
+set autoindent            " Enable auto indenting
+set number                " Enable line number
+colorscheme dracula       " Set nice looking colorscheme
+set nobackup              " Disable backup files
+set nowritebackup         " Disable backup
+set laststatus=2          " Show status line
+set wildmenu              " Show command line's tab complete options
 
-" Write the file when we leave the buffer
-set autowrite
+" Others settings
+set autoread              " Reload a file when it is changed from the outside
+set autowrite             " Write the file when we leave the buffer
+set spell                 " Enable spell checking (Default English)
+set cursorline            " Highlight current line
+set noswapfile            " Disable swapfiles too
 
+if version >= 703
+  set colorcolumn=+1      " Color the column after textwidth, usually the 80th
+endif
 
-" Disable swapfiles too
-set noswapfile
-
-" Show line number
-set number
+if (has("termguicolors"))
+    set termguicolors     " ?
+endif 
 
 " *****************************************
 " For Completion:
+" Require nobackup and nowritebackup too
+set updatetime=300        " Reduce delay to improve DX
+set cmdheight=2           " Give more space for displaying messages.
+set hidden                " Hide buffers instead of closing them
 " *****************************************
-
-" Reduce delay to improve DX
-set updatetime=300
-
-" Disable backups, we have source control for that
-" Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
-
-" Give more space for displaying messages.
-set cmdheight=2
-
-" Hide buffers instead of closing them and
-" TextEdit might fail if hidden is not set.
-set hidden
-
-" *****************************************
-
-" Enables syntax highlighting
-syntax on
-
-" Color the column after textwidth, usually the 80th
-if version >= 703
-  set colorcolumn=+1
-
-endif
-
-set shiftwidth=2
-
-" Highlight current line
-set cursorline
-
-" APPEARANCE
-if (has("termguicolors"))
-    set termguicolors
-endif
-syntax enable
-colorscheme dracula
 
 
 " NERD TREE
@@ -71,8 +51,10 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
+
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " Toggle
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 
