@@ -38,8 +38,4 @@ mkdir -p ~/.config/i3status
 ln -sv ~/dotfiles/config/i3/config ~/.config/i3/config
 ln -sv ~/dotfiles/config/i3/i3status ~/.config/i3status/config
 
-# Rofi
-# mkdir -p ~/.config/rofi
-# cp -r ~/dotfiles/config/rofi/* ~/.config/rofi
-
 echo "done"

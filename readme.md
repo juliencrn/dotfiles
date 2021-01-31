@@ -1,6 +1,6 @@
-# My Ubuntu development config
+# My development config
 
-### ⚠️ Building...
+### ⚠️ Work in progress repository
 
 ## In this repo
 - Scripts (cf: `documentation.md` and `scripts/` folder)
