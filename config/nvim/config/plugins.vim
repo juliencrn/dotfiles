@@ -12,9 +12,6 @@ call plug#begin("~/.vim/plugged")
     " UI 
     Plug 'dracula/vim'
     Plug 'vim-airline/vim-airline' 
-    Plug 'ryanoasis/vim-devicons' " TODO: Needed ?
-
-    Plug 'scrooloose/nerdtree'
 
     " TODO: Check built-in feature
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

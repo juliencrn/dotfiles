@@ -6,6 +6,7 @@
 
 " Plugins
 source ~/dotfiles/config/nvim/config/plugins.vim
+source ~/dotfiles/config/nvim/config/explorer.vim
 
 " From "Mastering Vim Quickly" book
 set nocompatible          " Use Vim settings, rather than Vi settings
@@ -40,7 +41,6 @@ endif
 " Automatically change the current directory
 " See https://vim.fandom.com/wiki/Set_working_directory_to_the_current_file
 " autocmd BufEnter * silent! lcd %:p:h
-
 " *****************************************
 " For Completion:
 " Require nobackup and nowritebackup too
@@ -48,19 +48,6 @@ set updatetime=300        " Reduce delay to improve DX
 set cmdheight=2           " Give more space for displaying messages.
 set hidden                " Hide buffers instead of closing them
 " *****************************************
-
-
-" NERD TREE
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeIgnore = []
-let g:NERDTreeStatusline = ''
-
-" Automaticaly close nvim if NERDTree is only thing left open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Toggle
-nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 
 " peitalin/vim-jsx-typescript
 " set filetypes as typescriptreact
