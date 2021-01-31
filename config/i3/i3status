@@ -11,7 +11,7 @@ general {
 }
 
 order += "taskwarrior"
-order += "xscreensaver"
+# order += "xscreensaver"
 order += "tztime paris"
 order += "volume master"
 order += "spotify"
@@ -56,7 +56,7 @@ spotify {
     button_play_pause = 1
     button_previous = 5
     format = " {artist}: {title}"
-    format_down = " Spotify off"
+    format_down = ""
 }
 
 do_not_disturb {
