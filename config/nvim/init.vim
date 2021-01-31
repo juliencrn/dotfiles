@@ -37,6 +37,10 @@ if (has("termguicolors"))
     set termguicolors     " ?
 endif 
 
+" Automatically change the current directory
+" See https://vim.fandom.com/wiki/Set_working_directory_to_the_current_file
+" autocmd BufEnter * silent! lcd %:p:h
+
 " *****************************************
 " For Completion:
 " Require nobackup and nowritebackup too
