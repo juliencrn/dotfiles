@@ -1,0 +1,66 @@
+configuration {
+  drun-display-format: "{icon} {name}";
+  font: "Fira Code Medium 10";
+  modi: "window,run,drun";
+  show-icons: true;
+}
+
+* {
+  blue: #6272a4;
+  purple: #bd93f9;
+  fg: #f8f8f2;
+  bg: #282a36;
+  bg-alt: #44475a;
+
+  background-color: @bg;
+	  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+element {
+  padding: 12;
+  orientation: vertical;
+  text-color: @blue;
+}
+
+element selected {
+  text-color: @purple;
+}
+
+entry {
+  background-color: @bg;
+  padding: 12 12 12 12;
+  text-color: @fg;
+}
+
+inputbar {
+  children: [ entry];
+}
+
+listview {
+  columns: 1;
+  lines: 12;
+}
+
+mainbox {
+  children: [inputbar, listview];
+	border: 2;
+	border-color: @purple;
+}
+
+prompt {
+  background-color: @blue;
+  enabled: true;
+  font: "Fira Code Medium 12";
+  padding: 12 0 0 12;
+  text-color: @fg;
+}
+
+window {
+  transparency: "real";
+}
+
+/* vim:ft=css

@@ -72,10 +72,12 @@ bindsym $mod+p exec "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 ~/Downloads/Scree
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start Dmenu
-# bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '$black' -sb '$green' -sf '$black' -fn 'Fira Code-10' -p 'dmenu%'"
+# NAVIGATION
+
 bindsym $mod+d exec "dmenu_extended_run"
-# bindsym $mod+m exec "dmenu_extended_run "-> Internet search: " "Wikipedia"
+# bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '$black' -sb '$green' -sf '$black' -fn 'Fira Code-10' -p 'dmenu%'"
+# bindsym $mod+d exec "rofi -show drun "
+# bindsym $mod+d exec "sh ~/dotfiles/config/rofi/lauch.sh"
 
 # Open applications shortcuts
 bindsym $mod+b exec "brave-browser"
