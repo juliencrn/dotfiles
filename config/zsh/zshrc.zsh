@@ -51,6 +51,7 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
 alias refresh="sh ~/dotfiles/scripts/refresh-symlinks.sh"
 alias reload="source ~/.zshrc"
+alias ciao="shutdown now"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

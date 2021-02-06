@@ -11,7 +11,9 @@ rm -rf \
     ~/.p10k.fzf \
     ~/.zshenv \
     ~/.config/i3/config \
-    ~/.config/i3status/config
+    ~/.config/i3status/config \
+    ~/.config/dmenu-extended/config/dmenuExtended_preferences.txt \
+    ~/.config/dmenu-extended/config/internetSearch.json
     # ~/.config/rofi/*
 
 echo "Set up symlinks"
@@ -35,7 +37,10 @@ ln -sv ~/dotfiles/config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 # i3
 mkdir -p ~/.config/i3
 mkdir -p ~/.config/i3status
+mkdir -p ~/.config/dmenu-extended/config
 ln -sv ~/dotfiles/config/i3/config ~/.config/i3/config
 ln -sv ~/dotfiles/config/i3/i3status ~/.config/i3status/config
+ln -sv ~/dotfiles/config/i3/dmenu/preferences.txt ~/.config/dmenu-extended/config/dmenuExtended_preferences.txt
+ln -sv ~/dotfiles/config/i3/dmenu/internetSearch.json ~/.config/dmenu-extended/config/internetSearch.json
 
 echo "done"

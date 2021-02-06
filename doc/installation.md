@@ -13,7 +13,7 @@
 
 ```zsh
 sudo apt update
-sudo apt -y zsh i3 i3lock xscreensaver taskwarrior hsetroot fzf git curl wget nvim nvm gnome-sushi snapd dconf-cli maim pulseaudio alsa py3status
+sudo apt -y zsh i3 i3lock suckless-tools xfonts-terminus xscreensaver taskwarrior hsetroot fzf git curl wget nvim nvm gnome-sushi snapd dconf-cli maim pulseaudio alsa py3status
 sudo snap install brave code spotify vlc docker insomnia
 
 # TODO: Duplicated, I can remove this one ?
@@ -90,3 +90,14 @@ sudo apt install i3
 
 
 https://draculatheme.com/insomnia/
+
+## dmenu extended
+
+```
+git clone https://github.com/MarkHedleyJones/dmenu-extended
+cd dmenu
+sudo python setup.py install
+dmenu_extended_run
+```
+
+
