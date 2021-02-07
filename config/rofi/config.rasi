@@ -21,7 +21,7 @@ configuration {
 }
 
 element {
-  padding: 12;
+  padding: 6;
   orientation: vertical;
   text-color: @blue;
 }
@@ -32,7 +32,7 @@ element selected {
 
 entry {
   background-color: @bg;
-  padding: 12 12 12 12;
+  padding: 12 6;
   text-color: @fg;
 }
 
@@ -42,7 +42,7 @@ inputbar {
 
 listview {
   columns: 1;
-  lines: 12;
+  lines: 16;
 }
 
 mainbox {

@@ -11,7 +11,7 @@
         },
         {
             "title": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Special:Search?search={searchterm}"
+            "url": "https://fr.wikipedia.org/wiki/Special:Search?search={searchterm}"
         },
         {
             "title": "Youtube",
@@ -24,6 +24,26 @@
         {
             "title": "Github",
             "url": "https://github.com/search?q={searchterm}"
+        },
+        {
+            "title": "Find Jira issue (without WEB-)",
+            "url": "https://chefclub.atlassian.net/browse/WEB-{searchterm}"
+        },
+        {
+            "title": "Translate FR -> EN",
+            "url": "https://translate.google.com/?sl=fr&tl=en&text={searchterm}&op=translate"
+        },
+        {
+            "title": "Translate EN -> FR",
+            "url": "https://translate.google.com/?sl=en&tl=fr&text={searchterm}&op=translate"
+        },
+        {
+            "title": "Translate FR -> ES",
+            "url": "https://translate.google.com/?sl=fr&tl=es&text={searchterm}&op=translate"
+        },
+        {
+            "title": "Translate ES -> FR",
+            "url": "https://translate.google.com/?sl=es&tl=fr&text={searchterm}&op=translate"
         }
     ]
 }

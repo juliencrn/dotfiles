@@ -45,8 +45,8 @@ ln -sv ~/dotfiles/config/i3/i3status ~/.config/i3status/config
 # Navigation
 mkdir -p ~/.config/dmenu-extended/config
 mkdir -p ~/.config/rofi
-ln -sv ~/dotfiles/config/i3/dmenu-extended/preferences.txt ~/.config/dmenu-extended/config/dmenuExtended_preferences.txt
-ln -sv ~/dotfiles/config/i3/dmenu-extended/internetSearch.json ~/.config/dmenu-extended/config/internetSearch.json
+ln -sv ~/dotfiles/config/dmenu-extended/preferences.json ~/.config/dmenu-extended/config/dmenuExtended_preferences.txt
+ln -sv ~/dotfiles/config/dmenu-extended/internetSearch.json ~/.config/dmenu-extended/config/internetSearch.json
 ln -sv ~/dotfiles/config/rofi/config.rasi ~/.config/rofi/config.rasi
 
 echo "done"
