@@ -1,0 +1,15 @@
+{
+  "Open Home": {
+    "commands": ["nautilus /home/julien"],
+    "type": "Directory"
+  },
+  "Open Downloads": {
+    "commands": ["nautilus /home/julien/Downloads"],
+    "type": "Directory"
+  },
+  "Open www": {
+    "commands": ["nautilus /home/julien/www"],
+    "type": "Directory"
+  }
+}
+

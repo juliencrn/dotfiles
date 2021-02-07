@@ -15,6 +15,7 @@ rm -rf \
     ~/.config/i3status/config \
     ~/.config/dmenu-extended/config/dmenuExtended_preferences.txt \
     ~/.config/dmenu-extended/config/internetSearch.json \
+    ~/.config/dmenu-extended/config/dmenu_projects.json \
     ~/.config/rofi/*
 
 echo "Set up symlinks"
@@ -46,7 +47,8 @@ ln -sv ~/dotfiles/config/i3/i3status ~/.config/i3status/config
 mkdir -p ~/.config/dmenu-extended/config
 mkdir -p ~/.config/rofi
 ln -sv ~/dotfiles/config/dmenu-extended/preferences.json ~/.config/dmenu-extended/config/dmenuExtended_preferences.txt
-ln -sv ~/dotfiles/config/dmenu-extended/internetSearch.json ~/.config/dmenu-extended/config/internetSearch.json
+ln -sv ~/dotfiles/config/dmenu-extended/internetSearch.json ~/.config/dmenu-extended/config/internetSearch.json 
+ln -sv ~/dotfiles/config/dmenu-extended/dmenu_projects.json ~/.config/dmenu-extended/config/dmenu_projects.json
 ln -sv ~/dotfiles/config/rofi/config.rasi ~/.config/rofi/config.rasi
 
 echo "done"
