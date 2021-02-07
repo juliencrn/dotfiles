@@ -66,11 +66,11 @@ bindsym $mod+equal exec --no-startup-id amixer -q -D pulse sset Master 5%+ unmut
 # bindsym XF86AudioNext exec playerctl next
 # bindsym XF86AudioPrev exec playerctl previous
 
-# Take screenshots with maim (MAke IMage)
-bindsym $mod+p exec "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 ~/Downloads/Screenshot-$(date -Iseconds | cut -d'+' -f1).png"
+# Take screenshots
+bindsym $mod+p exec "gnome-screenshot -i"
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # NAVIGATION
 
