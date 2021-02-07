@@ -10,6 +10,7 @@ rm -rf \
     ~/.fzf.zsh \
     ~/.p10k.fzf \
     ~/.zshenv \
+    ~/.aliases \
     ~/.config/i3/config \
     ~/.config/i3status/config \
     ~/.config/dmenu-extended/config/dmenuExtended_preferences.txt \
@@ -29,6 +30,7 @@ ln -sv ~/dotfiles/config/zsh/zshrc.zsh ~/.zshrc
 ln -sv ~/dotfiles/config/zsh/fzf.zsh ~/.fzf.zsh
 ln -sv ~/dotfiles/config/zsh/p10k.zsh ~/.p10k.zsh
 ln -sv ~/dotfiles/config/zsh/zshenv.zsh ~/.zshenv
+ln -sv ~/dotfiles/config/zsh/aliases.zsh ~/.aliases
 
 # vim
 ln -sv ~/dotfiles/config/nvim/init.vim ~/.config/nvim/init.vim
