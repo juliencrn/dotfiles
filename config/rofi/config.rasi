@@ -1,8 +1,12 @@
 configuration {
   drun-display-format: "{icon} {name}";
   font: "Fira Code Medium 10";
-  modi: "window,run,drun";
+  //modi: "window,run,drun";
   show-icons: true;
+  //combi-modi: "window,drun,ssh,Project:~/.config/rofi/project.sh";
+  //combi-modi: "window,drun,run,keys";
+  //modi: "keys,drun,window,run";
+  sidebar-mode: true;
 }
 
 * {

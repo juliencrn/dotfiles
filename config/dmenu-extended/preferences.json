@@ -21,68 +21,34 @@
   "filter_binaries": true,
   "follow_symlinks": true,
   "frequently_used": 5,
-  "global_ignore_folders": [
-    "node_modules"
-  ],
-  "ignore_folders": [
-    "node_modules"
-  ],
+  "global_ignore_folders": ["node_modules"],
+  "ignore_folders": ["node_modules"],
   "include_applications": true,
   "include_binaries": true,
   "include_hidden_files": false,
   "include_hidden_folders": false,
   "include_items": [
-    [
-      "Localhost",
-      "http://localhost:8000"
-    ],
-    [
-      "Netlify",
-      "https://app.netlify.com/"
-    ],
-    [
-      "Google Analytics",
-      "https://analytics.google.com/analytics/web/"
-    ],
+    ["Localhost", "http://localhost:8000"],
+    ["Netlify", "https://app.netlify.com/"],
+    ["Google Analytics", "https://analytics.google.com/analytics/web/"],
+    ["Google Calendar", "https://calendar.google.com/calendar/u/0/r"],
+    ["Google Drive", "https://drive.google.com/drive/my-drive"],
     [
       "Jira",
       "https://chefclub.atlassian.net/secure/RapidBoard.jspa?projectKey=WEB"
     ],
-    [
-      "Figma",
-      "https://www.figma.com/files/recent"
-    ],
-    [
-      "Protonmail",
-      "https://mail.protonmail.com/login"
-    ],
-    [
-      "Gmail",
-      "https://mail.google.com/mail/u/0/#inbox"
-    ],
-    [
-      "DevDocs",
-      "https://devdocs.io/#q:focus"
-    ],
-    [
-      "Notion",
-      "https://www.notion.so/"
-    ]
+    ["Figma", "https://www.figma.com/files/recent"],
+    ["Protonmail", "https://mail.protonmail.com/login"],
+    ["Gmail", "https://mail.google.com/mail/u/0/#inbox"],
+    ["DevDocs", "https://devdocs.io/#q:focus"],
+    ["Notion", "https://www.notion.so/"]
   ],
   "indicator_alias": "",
   "indicator_edit": "*",
   "indicator_submenu": "->",
   "menu": "rofi",
-  "menu_arguments": [
-    "-dmenu",
-    "-f",
-    "-i"
-  ],
-  "password_helper": [
-    "zenity",
-    "--password",
-    "--title={prompt}"
-  ],
+  "menu_arguments": ["-dmenu", "-f", "-i"],
+  "password_helper": ["zenity", "--password", "--title={prompt}"],
   "path_aliasFile": "~/.aliases",
   "path_shellCommand": "~/.dmenuEextended_shellCommand.sh",
   "prompt": "Open",
@@ -90,8 +56,6 @@
   "terminal": "i3-sensible-terminal",
   "terminal_editor": "vim",
   "valid_extensions": [],
-  "watch_folders": [
-    "~/"
-  ],
+  "watch_folders": ["~/"],
   "webbrowser": "xdg-open"
 }
