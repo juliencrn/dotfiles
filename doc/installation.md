@@ -13,7 +13,7 @@
 
 ```zsh
 sudo apt update
-sudo apt -y rofi zsh i3 i3lock suckless-tools taskwarrior hsetroot fzf git curl wget nvim nvm gnome-sushi snapd dconf-cli pulseaudio alsa py3status
+sudo apt -y zsh i3 i3lock suckless-tools taskwarrior hsetroot fzf git curl wget nvim nvm gnome-sushi snapd dconf-cli pulseaudio alsa py3status
 sudo snap install brave code spotify vlc docker insomnia
 
 # TODO: Duplicated, I can remove this one ?
@@ -44,6 +44,9 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 # Install plugin: zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Install plugin: zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # ...then activate the plugin in ~/.zshrc
 plugins=( [plugins...] zsh-syntax-highlighting)
@@ -92,6 +95,14 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 I3 is a tiny windows manager
 ```zsh
 sudo apt install i3
+```
+
+## Rofi 1.6
+
+```zsh
+sudo add-apt-repository ppa:troutcobbler/lts-debs
+sudo apt-get update
+sudo apt install rofi
 ```
 
 

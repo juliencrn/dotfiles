@@ -1,70 +1,84 @@
+// just run $ rofi -show drun
+
 configuration {
-  drun-display-format: "{icon} {name}";
+  // Features
+  modi: "drun,window,run,task:task,calc:qalc,file-browser,keys,combi";
+  matching: "fuzzy";
+  show-match: true;
+  terminal: "gnome-terminal";
+  run-command: "zsh -c '{cmd}'";
+  run-list-command: "zsh -c rofi-scripts";
+  
+  // Style
   font: "Fira Code Medium 10";
-  //modi: "window,run,drun";
   show-icons: true;
-  //combi-modi: "window,drun,ssh,Project:~/.config/rofi/project.sh";
-  //combi-modi: "window,drun,run,keys";
-  //modi: "keys,drun,window,run";
+  width: 50; // in %
+	lines: 15;
+	columns: 1;
   sidebar-mode: true;
 }
 
 * {
   blue: #6272a4;
   purple: #bd93f9;
-  fg: #f8f8f2;
+  white: #f8f8f2;
   bg: #282a36;
   bg-alt: #44475a;
 
   background-color: @bg;
-	  
-  border: 0;
-  margin: 0;
-  padding: 0;
-  spacing: 0;
-}
-
-element {
-  padding: 6;
-  orientation: vertical;
-  text-color: @blue;
-}
-
-element selected {
-  text-color: @purple;
-}
-
-entry {
-  background-color: @bg;
-  padding: 12 6;
-  text-color: @fg;
-}
-
-inputbar {
-  children: [ entry];
-}
-
-listview {
-  columns: 1;
-  lines: 16;
+  text-color: @white;
+  font: "Fira Code Medium 10";
 }
 
 mainbox {
-  children: [inputbar, listview];
 	border: 2;
-	border-color: @purple;
+  border-radius: 8;
+	border-color: @blue;
+}
+
+inputbar {
+  children: [prompt, textbox-prompt-sep, entry];
+  border-color: @blue;
+  border: 0 0 2 0;
+  padding: 10;
 }
 
 prompt {
-  background-color: @blue;
-  enabled: true;
-  font: "Fira Code Medium 12";
-  padding: 12 0 0 12;
-  text-color: @fg;
+  text-color: @blue;
 }
 
-window {
-  transparency: "real";
+textbox-prompt-sep {
+    expand: false;
+    str: ":";
+}
+
+entry {
+  text-color: @white;
+}
+
+element {
+  children: [element-icon, element-text];
+	padding: 6;
+  text-color: @blue;
+}
+
+element-icon {
+  size: 16;
+}
+
+element selected {
+  background-color: @blue;
+  text-color: @white;
+}
+
+button {
+  padding: 4;
+  text-color: @white;
+  background-color: @bg;
+}
+
+button.selected {
+  background-color: @blue;
 }
 
 /* vim:ft=css
