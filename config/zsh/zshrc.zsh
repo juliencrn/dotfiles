@@ -28,7 +28,15 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm gatsby zsh-syntax-highlighting)
+plugins=( \
+    git nvm gatsby \
+    zsh-syntax-highlighting \
+    zsh-autosuggestions \
+    zsh-interactive-cd \
+    taskwarrior \
+    web-search \
+    sudo \
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -54,3 +62,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+
+export TERMINAL="gnome-terminal"
