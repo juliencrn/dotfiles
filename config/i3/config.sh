@@ -6,7 +6,8 @@
 #######################################################
 
 # set $mod Mod1
-set $mod Mod4
+set $mod Mod4 
+set $terminal gnome-terminal # Or gnome-terminal
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -67,24 +68,26 @@ bindsym $mod+equal exec --no-startup-id amixer -q -D pulse sset Master 5%+ unmut
 # bindsym XF86AudioPrev exec playerctl previous
 
 # Take screenshots
-bindsym $mod+p exec "gnome-screenshot -i"
+# bindsym $mod+p exec --no-startup-id "gnome-screenshot -i"
+bindsym $mod+p exec --no-startup-id "sh ~/dotfiles/scripts/screenshot.sh" 
 
 # kill focused window
 bindsym $mod+q kill
 
-# NAVIGATION
+# NAVIGATION using Rofi
+bindsym $mod+d exec "rofi -show drun"
 
-bindsym $mod+d exec --no-startup-id "dmenu_extended_run"
-bindsym $mod+Shift+d exec "dmenu_run -nf '#F8F8F2' -nb '$black' -sb '$green' -sf '$black' -fn 'Fira Code-10'  -l 16 -h 20"
-bindsym $mod+a exec "rofi -combi-modi window,drun,run,keys -show combi -modi combi -terminal gnome-terminal -matching fuzzy -sidebar-mode"
-bindsym $mod+Tab exec "rofi -show window"
+# bindsym $mod+d exec --no-startup-id "dmenu_extended_run"
+# bindsym $mod+Shift+d exec "dmenu_run -nf '#F8F8F2' -nb '$black' -sb '$green' -sf '$black' -fn 'Fira Code-10' -l 16 -h 20"
+# bindsym $mod+a exec "rofi -combi-modi window,drun,run,keys -show combi -modi combi -terminal $terminal -matching fuzzy -sidebar-mode"
+# bindsym $mod+Shift+a exec --no-startup-id sh ~/dotfiles/config/rofi/launch.sh
+# bindsym $mod+Tab exec "rofi -show window"
 
 # Open applications shortcuts
 bindsym $mod+b exec "brave-browser"
 bindsym $mod+c exec "code"
 bindsym $mod+n exec "nautilus"
-bindsym $mod+Return exec i3-sensible-terminal
-# bindsym $mod+Return exec  "gnome-terminal"
+bindsym $mod+Return exec $terminal
 
 # change focus
 bindsym $mod+$left focus left
@@ -223,7 +226,7 @@ bar {
         position top
 
         separator_symbol        "|"
-        workspace_buttons       no
+        workspace_buttons       yes
 
 	colors {
 	    background $black 
@@ -269,4 +272,3 @@ exec --no-startup-id hsetroot -solid "#00000"
 exec --no-startup-id nordvpn connect spain
 exec --no-startup-id pulseaudio --start
 exec --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-0 --off --output DP-1 --off --output HDMI-1 --mode 1920x1080 --pos 3840x0 --rotate normal --output HDMI-2 --mode 1920x1080 --pos 0x0 --rotate normal
-

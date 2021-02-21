@@ -40,8 +40,8 @@ ln -sv ~/dotfiles/config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 # i3
 mkdir -p ~/.config/i3
 mkdir -p ~/.config/i3status
-ln -sv ~/dotfiles/config/i3/config ~/.config/i3/config
-ln -sv ~/dotfiles/config/i3/i3status ~/.config/i3status/config
+ln -sv ~/dotfiles/config/i3/config.sh ~/.config/i3/config
+ln -sv ~/dotfiles/config/i3/i3status.sh ~/.config/i3status/config
 
 # Navigation
 mkdir -p ~/.config/dmenu-extended/config
