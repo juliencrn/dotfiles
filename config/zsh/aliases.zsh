@@ -3,6 +3,7 @@
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias ls="ls --color=auto"
+alias ll="ls -lah" # -l -> List | -a -> All | -r -> Reverse | T -> Sort -Time | -h -> Human size (Ko, Mo, Go)
 alias svim="sudo vim"
 alias update="sh ~/dotfiles/scripts/clean-ubuntu.sh"
 alias myip="curl http://ipecho.net/plain; echo"
@@ -11,3 +12,16 @@ alias refresh="sh ~/dotfiles/scripts/refresh-symlinks.sh"
 alias reload="source ~/.zshrc"
 alias ciao="shutdown now"
 alias pip="pip3"
+alias screenshot="sh ~/dotfiles/scripts/screenshot.sh"
+alias install="sudo apt-get install"
+alias remove="sudo apt-get remove --purge"
+alias calc='qalc'
+alias gg='google'
+
+# Suffix Alias
+# This follow will open VSCode when write filename using txt extension
+alias -s txt=code
+
+# Testing
+alias rofi-scripts='alias | sed -e "s/=.*//"'
+alias test="echo 'Hello terminal'"
