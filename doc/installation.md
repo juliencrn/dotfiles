@@ -13,7 +13,7 @@
 
 ```zsh
 sudo apt update
-sudo apt -y zsh i3 i3lock suckless-tools taskwarrior hsetroot fzf git curl wget nvim nvm gnome-sushi snapd dconf-cli pulseaudio alsa py3status
+sudo apt -y zsh i3 i3lock feh suckless-tools taskwarrior hsetroot fzf git curl wget nvim nvm gnome-sushi snapd dconf-cli pulseaudio alsa py3status
 sudo snap install brave code spotify vlc docker insomnia
 
 # TODO: Duplicated, I can remove this one ?

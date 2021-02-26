@@ -254,6 +254,10 @@ gaps outer 0
 
 #######################################################
 # Startup applications
+#
+# Tip
+# exec: on i3 init
+# exec_always: on i3 reload
 #######################################################
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
@@ -268,7 +272,8 @@ exec --no-startup-id nm-applet
 exec /usr/libexec/gnome-settings-daemon
 exec --no-startup-id gnome-settings-daemon
 
-exec --no-startup-id hsetroot -solid "#00000"
+# exec --no-startup-id hsetroot -solid "#00000"
+exec --no-startup-id feh --bg-scale ~/dotfiles/assets/ubuntu-1.png  
 exec --no-startup-id nordvpn connect spain
 exec --no-startup-id pulseaudio --start
 exec --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-0 --off --output DP-1 --off --output HDMI-1 --mode 1920x1080 --pos 3840x0 --rotate normal --output HDMI-2 --mode 1920x1080 --pos 0x0 --rotate normal
