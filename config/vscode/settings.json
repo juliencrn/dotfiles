@@ -1,0 +1,103 @@
+{
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "500",
+  "sync.autoDownload": true,
+  "sync.autoUpload": true,
+  "sync.quietSync": true,
+  "sync.gist": "1d252ff3ddcd9ccce8a96e001590e193",
+  "workbench.iconTheme": "material-icon-theme",
+  "php.validate.executablePath": "/usr/bin/php",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.shell.linux": "/usr/bin/zsh",
+  "terminal.integrated.automationShell.osx": "",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontFamily": "DroidSansMono Nerd Font",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "git.enableSmartCommit": true,
+  "explorer.confirmDragAndDrop": false,
+  "git.confirmSync": false,
+  "cSpell.userWords": [
+    "Arial",
+    "Formik",
+    "Monda",
+    "Orbitron",
+    "Pexels",
+    "linkedin",
+    "phablet",
+    "unexistising"
+  ],
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "git-commit",
+    "gitignore",
+    "go",
+    "handlebars",
+    "haskell",
+    "html",
+    "jade",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "pug",
+    "python",
+    "restructuredtext",
+    "rust",
+    "scala",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+    "yml"
+  ],
+  "eslint.alwaysShowStatus": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "material-icon-theme.activeIconPack": "react",
+  "material-icon-theme.folders.theme": "classic",
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll.eslint": true
+  // },
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "git.autofetch": true,
+  "gitlens.blame.highlight.enabled": false,
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "gitlens.gitCommands.closeOnFocusOut": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.startupEditor": "newUntitledFile",
+
+  "workbench.colorTheme": "Dracula",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "standard.autoFixOnSave": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "standard.engine": "ts-standard",
+  "window.menuBarVisibility": "compact",
+  "editor.codeActionsOnSave": null
+}
