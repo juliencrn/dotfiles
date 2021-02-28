@@ -31,15 +31,12 @@ configuration {
 }
 
 mainbox {
-	border: 2;
-  border-radius: 8;
-	border-color: @blue;
+	border: 3;
+	border-color: @purple;
 }
 
 inputbar {
   children: [prompt, textbox-prompt-sep, entry];
-  border-color: @blue;
-  border: 0 0 2 0;
   padding: 10;
 }
 
@@ -63,11 +60,11 @@ element {
 }
 
 element-icon {
-  size: 16;
+  size: 20;
 }
 
 element selected {
-  background-color: @blue;
+  background-color: @bg-alt;
   text-color: @white;
 }
 
@@ -78,7 +75,7 @@ button {
 }
 
 button.selected {
-  background-color: @blue;
+  background-color: @bg-alt;
 }
 
 /* vim:ft=css
