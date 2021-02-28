@@ -181,7 +181,7 @@ bindsym $mod+space focus mode_toggle
 # END TMP
 #
 
-# exit i3 (logs you out of your X session)
+# exit i3 (logout) (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
@@ -273,7 +273,12 @@ exec /usr/libexec/gnome-settings-daemon
 exec --no-startup-id gnome-settings-daemon
 
 # exec --no-startup-id hsetroot -solid "#00000"
-exec --no-startup-id feh --bg-scale ~/dotfiles/assets/ubuntu-1.png  
+exec_always --no-startup-id feh --bg-scale ~/dotfiles/assets/ubuntu-1.png  
 exec --no-startup-id nordvpn connect spain
 exec --no-startup-id pulseaudio --start
+
+# TODO: Use the script and fix screen order
 exec --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-0 --off --output DP-1 --off --output HDMI-1 --mode 1920x1080 --pos 3840x0 --rotate normal --output HDMI-2 --mode 1920x1080 --pos 0x0 --rotate normal
+
+# exec_always --no-startup-id killall picom
+exec --no-startup-id picom -b
