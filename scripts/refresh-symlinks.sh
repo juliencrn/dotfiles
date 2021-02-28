@@ -1,54 +1,57 @@
-echo "Clean-up"
-rm -rf \
-    ~/.gitconfig \
-    ~/.xinitrc \
-    ~/.xsessionrc \
-    ~/.Xresources \
-    ~/.config/nvim/init.vim \
-    ~/.config/nvim/coc-settings.json \
-    ~/.zshrc \
-    ~/.fzf.zsh \
-    ~/.p10k.fzf \
-    ~/.zshenv \
-    ~/.aliases \
-    ~/.config/i3/config \
-    ~/.config/i3status/config \
-    ~/.config/dmenu-extended/config/dmenuExtended_preferences.txt \
-    ~/.config/dmenu-extended/config/internetSearch.json \
-    ~/.config/dmenu-extended/config/dmenu_projects.json \
-    ~/.config/rofi/*
+#!/bin/bash
 
-echo "Set up symlinks"
+# Create symlinks between this versionned dotfiles folder
+# and config location: $CONFIG/*
+
+# Usage $ symlink from_file to_file
+symlink(){
+    rm $2
+    ln -sv $1 $2
+}
+
+CONFIG="$HOME/.config"
+DOTFILES="$HOME/dotfiles"
+DOTFILES_CONFIG="$HOME/dotfiles/config"
 
 # Base
-ln -sv ~/dotfiles/config/.xsessionrc ~
-ln -sv ~/dotfiles/config/.gitconfig ~
-ln -sv ~/dotfiles/config/.Xresources ~
-ln -sv ~/dotfiles/config/.xinitrc ~
+symlink $DOTFILES_CONFIG/.gitconfig $HOME/.gitconfig
+symlink $DOTFILES_CONFIG/.xinitrc $HOME/.xinitrc
+symlink $DOTFILES_CONFIG/.xsessionrc $HOME/.xsessionrc
+symlink $DOTFILES_CONFIG/.Xresources $HOME/.Xresources
 
 # zsh
-ln -sv ~/dotfiles/config/zsh/zshrc.zsh ~/.zshrc
-ln -sv ~/dotfiles/config/zsh/fzf.zsh ~/.fzf.zsh
-ln -sv ~/dotfiles/config/zsh/p10k.zsh ~/.p10k.zsh
-ln -sv ~/dotfiles/config/zsh/zshenv.zsh ~/.zshenv
-ln -sv ~/dotfiles/config/zsh/aliases.zsh ~/.aliases
+symlink $DOTFILES_CONFIG/zsh/zshrc.zsh $HOME/.zshrc
+symlink $DOTFILES_CONFIG/zsh/fzf.zsh $HOME/.fzf.zsh
+symlink $DOTFILES_CONFIG/zsh/p10k.zsh $HOME/.p10k.zsh
+symlink $DOTFILES_CONFIG/zsh/zshenv.zsh $HOME/.zshenv
+symlink $DOTFILES_CONFIG/zsh/aliases.zsh $HOME/.aliases
 
 # vim
-ln -sv ~/dotfiles/config/nvim/init.vim ~/.config/nvim/init.vim
-ln -sv ~/dotfiles/config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
+mkdir -p $CONFIG/nvim
+symlink $DOTFILES_CONFIG/nvim/init.vim $CONFIG/nvim/init.vim
+symlink $DOTFILES_CONFIG/nvim/coc-settings.json $CONFIG/nvim/coc-settings.json
+
+# Gnome theme
+mkdir -p $CONFIG/gtk-3.0
+symlink $DOTFILES_CONFIG/gtk-3.0/settings.ini $CONFIG/gtk-3.0/settings.ini
+
+# VSCode
+mkdir -p $CONFIG/Code/User
+symlink $DOTFILES_CONFIG/vscode/settings.json $CONFIG/Code/User/settings.json
 
 # i3
-mkdir -p ~/.config/i3
-mkdir -p ~/.config/i3status
-ln -sv ~/dotfiles/config/i3/config.sh ~/.config/i3/config
-ln -sv ~/dotfiles/config/i3/i3status.sh ~/.config/i3status/config
+mkdir -p $CONFIG/i3
+mkdir -p $CONFIG/i3status
+mkdir -p $CONFIG/picom
+symlink $DOTFILES_CONFIG/i3/config.sh $CONFIG/i3/config
+symlink $DOTFILES_CONFIG/i3/i3status.sh $CONFIG/i3status/config
+symlink $DOTFILES_CONFIG/i3/picom.conf $CONFIG/picom/picom.conf
 
 # Navigation
-mkdir -p ~/.config/dmenu-extended/config
-mkdir -p ~/.config/rofi
-ln -sv ~/dotfiles/config/dmenu-extended/preferences.json ~/.config/dmenu-extended/config/dmenuExtended_preferences.txt
-ln -sv ~/dotfiles/config/dmenu-extended/internetSearch.json ~/.config/dmenu-extended/config/internetSearch.json 
-ln -sv ~/dotfiles/config/dmenu-extended/dmenu_projects.json ~/.config/dmenu-extended/config/dmenu_projects.json
-ln -sv ~/dotfiles/config/rofi/config.rasi ~/.config/rofi/config.rasi
+mkdir -p $CONFIG/rofi
+mkdir -p $CONFIG/dmenu-extended/config
 
-echo "done"
+symlink $DOTFILES_CONFIG/dmenu-extended/preferences.json $CONFIG/dmenu-extended/config/dmenuExtended_preferences.txt
+symlink $DOTFILES_CONFIG/dmenu-extended/internetSearch.json $CONFIG/dmenu-extended/config/internetSearch.json 
+symlink $DOTFILES_CONFIG/dmenu-extended/dmenu_projects.json $CONFIG/dmenu-extended/config/dmenu_projects.json
+symlink $DOTFILES_CONFIG/rofi/config.rasi $CONFIG/rofi/config.rasi
