@@ -74,9 +74,15 @@
   },
   "material-icon-theme.activeIconPack": "react",
   "material-icon-theme.folders.theme": "classic",
-  // "editor.codeActionsOnSave": {
-  //   "source.fixAll.eslint": true
-  // },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
   "eslint.format.enable": true,
   "eslint.lintTask.enable": true,
   "git.autofetch": true,
@@ -95,9 +101,11 @@
   },
   "standard.autoFixOnSave": true,
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "standard.engine": "ts-standard",
   "window.menuBarVisibility": "compact",
-  "editor.codeActionsOnSave": null
+  "workbench.preferredDarkColorTheme": "Dracula",
+  "workbench.tips.enabled": false,
+  "workbench.editor.labelFormat": "short"
 }
