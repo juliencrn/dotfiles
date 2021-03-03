@@ -15,7 +15,7 @@ DOTFILES_CONFIG="$HOME/dotfiles/config"
 
 # Base
 symlink $DOTFILES_CONFIG/.gitconfig $HOME/.gitconfig
-symlink $DOTFILES_CONFIG/.xinitrc $HOME/.xinitrc
+# symlink $DOTFILES_CONFIG/.xinitrc $HOME/.xinitrc
 symlink $DOTFILES_CONFIG/.xsessionrc $HOME/.xsessionrc
 symlink $DOTFILES_CONFIG/.Xresources $HOME/.Xresources
 
