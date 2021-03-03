@@ -220,7 +220,7 @@ bar {
         # status_command exec /usr/bin/nproc
 
         # The next two lines are for the font that I am using
-        font pango:Fira Code 11
+        font pango:Fira Code 10
 
         # I want by i3bar to be at the top rather than the bottom
         position top
@@ -262,22 +262,23 @@ gaps outer 0
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
 # TODO: The two following rules are identical ?
-exec /usr/libexec/gnome-settings-daemon
-exec --no-startup-id gnome-settings-daemon
-
+# exec /usr/libexec/gnome-settings-daemon
+# exec --no-startup-id gnome-settings-daemon
+# exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 # exec --no-startup-id hsetroot -solid "#00000"
 exec_always --no-startup-id feh --bg-scale ~/dotfiles/assets/ubuntu-1.png  
 exec --no-startup-id nordvpn connect spain
 exec --no-startup-id pulseaudio --start
 
 # TODO: Use the script and fix screen order
+# exec --no-startup-id sh ~/dotfiles/scripts/xrandr.sh
 exec --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-0 --off --output DP-1 --off --output HDMI-1 --mode 1920x1080 --pos 3840x0 --rotate normal --output HDMI-2 --mode 1920x1080 --pos 0x0 --rotate normal
 
 # exec_always --no-startup-id killall picom
