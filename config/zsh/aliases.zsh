@@ -2,21 +2,26 @@
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+
+# Utils
 alias ls="ls --color=auto"
 alias ll="ls -lah" # -l -> List | -a -> All | -r -> Reverse | T -> Sort -Time | -h -> Human size (Ko, Mo, Go)
-alias svim="sudo vim"
-alias update="sh ~/dotfiles/scripts/clean-ubuntu.sh"
-alias myip="curl http://ipecho.net/plain; echo"
 alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
-alias refresh="sh ~/dotfiles/scripts/refresh-symlinks.sh"
-alias reload="source ~/.zshrc"
+
+# Shortcuts
+alias svim="sudo vim"
 alias ciao="shutdown now"
-alias pip="pip3"
-alias screenshot="sh ~/dotfiles/scripts/screenshot.sh"
+alias myip="curl http://ipecho.net/plain; echo"
+alias gg='google'
+
+# System
+alias reload="source ~/.zshrc"
 alias install="sudo apt-get install"
 alias remove="sudo apt-get remove --purge"
+
+# Reword
 alias calc='qalc'
-alias gg='google'
+alias pip="pip3"
 
 # Suffix Alias
 # This follow will open VSCode when write filename using txt extension

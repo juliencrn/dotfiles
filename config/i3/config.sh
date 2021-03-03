@@ -69,7 +69,8 @@ bindsym $mod+equal exec --no-startup-id amixer -q -D pulse sset Master 5%+ unmut
 
 # Take screenshots
 # bindsym $mod+p exec --no-startup-id "gnome-screenshot -i"
-bindsym $mod+p exec --no-startup-id "sh ~/dotfiles/scripts/screenshot.sh" 
+bindsym $mod+p exec --no-startup-id screenshot
+# bindsym $mod+p exec --no-startup-id "sh ~/dotfiles/scripts/screenshot.sh" 
 
 # kill focused window
 bindsym $mod+q kill
