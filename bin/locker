@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Time in minutes in [1, 60]
 # Notify before lock in seconde

@@ -7,6 +7,7 @@
 symlink(){
     rm $2
     ln -sv $1 $2
+    sudo chmod +x $2
 }
 
 CONFIG="$HOME/.config"
@@ -16,8 +17,9 @@ DOTFILES_CONFIG="$HOME/dotfiles/config"
 # Base
 symlink $DOTFILES_CONFIG/.gitconfig $HOME/.gitconfig
 # symlink $DOTFILES_CONFIG/.xinitrc $HOME/.xinitrc
-symlink $DOTFILES_CONFIG/.xsessionrc $HOME/.xsessionrc
 symlink $DOTFILES_CONFIG/.Xresources $HOME/.Xresources
+symlink $DOTFILES_CONFIG/.xsession $HOME/.xsession
+# symlink $DOTFILES_CONFIG/.xprofile $HOME/.xprofile
 
 # zsh
 symlink $DOTFILES_CONFIG/zsh/zshrc.zsh $HOME/.zshrc
