@@ -36,6 +36,7 @@ symlink $DOTFILES_CONFIG/nvim/coc-settings.json $CONFIG/nvim/coc-settings.json
 # Gnome theme
 mkdir -p $CONFIG/gtk-3.0
 symlink $DOTFILES_CONFIG/gtk-3.0/settings.ini $CONFIG/gtk-3.0/settings.ini
+symlink $DOTFILES_CONFIG/gtk-3.0/gtk.css $CONFIG/gtk-3.0/gtk.css
 
 # VSCode
 mkdir -p $CONFIG/Code/User
