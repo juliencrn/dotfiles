@@ -6,8 +6,9 @@
 #######################################################
 
 # set $mod Mod1
-set $mod Mod4 
+set $mod Mod4
 set $terminal gnome-terminal # Or gnome-terminal
+set $bin ~/dotfiles/bin
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -15,10 +16,6 @@ set $up k
 set $down j
 set $left h
 set $right l
-
-#######################################################
-# Theme
-#######################################################
 
 # Dracula colors
 set $black #000000
@@ -34,16 +31,16 @@ set $purple #bd93f9
 set $red #ff5555
 set $yellow #f1fa8c
 
-# Start i3bar to display a workspace bar
-# (plus the system information i3status finds out, if available)
+#######################################################
+# Theme
+#######################################################
 
 # class                 border   bground  text     indicator child_border
 client.focused          $purple  $comment $white   $purple   $purple
-client.focused_inactive $active  $active  $white   $active   $active
+client.focused_inactive $bg      $bg      $white   $bg       $bg
 client.urgent           $red     $red     $white   $red      $red
 client.unfocused        $bg      $bg      $white   $bg       $bg
 client.placeholder      $bg      $bg      $white   $bg       $bg
-
 client.background       $bg
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -51,32 +48,35 @@ client.background       $bg
 font pango: FontAwesome 12
 font pango: Fira Code 10
 
+#  Border
+for_window [class=".*"] border pixel 4
+
+# Gaps
+gaps inner 16
+gaps outer 0
+
+# Only enable gaps on a workspace when there is at least one container
+smart_gaps on
+
+# Hide edge borders only if there is one window with no gaps
+hide_edge_borders smart_no_gaps
+
 #######################################################
 # Key bindings
 #######################################################
 
-# Audio shortcuts compatible with PulseAudio
-# XF86AudioPlay, XF86AudioPrev, XF86AudioNext, XF86AudioStop
-bindsym XF86AudioLowerVolume    exec --no-startup-id amixer -q -D pulse sset Master 5%- unmute
-bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer -q -D pulse sset Master 5%+ unmute
-bindsym XF86AudioMute           exec --no-startup-id amixer -q -D pulse sset Master toggle
-
+# Audio shortcuts (compatible with PulseAudio?)
 bindsym $mod+minus exec --no-startup-id amixer -q -D pulse sset Master 5%- unmute
 bindsym $mod+equal exec --no-startup-id amixer -q -D pulse sset Master 5%+ unmute
-# bindsym XF86AudioPlay exec playerctl play-pause 
-# bindsym XF86AudioNext exec playerctl next
-# bindsym XF86AudioPrev exec playerctl previous
 
 # Take screenshots
-# bindsym $mod+p exec --no-startup-id "gnome-screenshot -i"
-bindsym $mod+p exec --no-startup-id screenshot
-# bindsym $mod+p exec --no-startup-id "sh ~/dotfiles/scripts/screenshot.sh" 
+bindsym $mod+p exec --no-startup-id $bin/screenshot
 
 # kill focused window
 bindsym $mod+q kill
 
 # NAVIGATION using Rofi
-bindsym $mod+d exec "rofi -show drun"
+bindsym $mod+d exec rofi -show drun
 
 # bindsym $mod+d exec --no-startup-id "dmenu_extended_run"
 # bindsym $mod+Shift+d exec "dmenu_run -nf '#F8F8F2' -nb '$black' -sb '$green' -sf '$black' -fn 'Fira Code-10' -l 16 -h 20"
@@ -84,10 +84,10 @@ bindsym $mod+d exec "rofi -show drun"
 # bindsym $mod+Shift+a exec --no-startup-id sh ~/dotfiles/config/rofi/launch.sh
 # bindsym $mod+Tab exec "rofi -show window"
 
-# Open applications shortcuts
-bindsym $mod+b exec "brave-browser"
-bindsym $mod+c exec "code"
-bindsym $mod+n exec "nautilus"
+# Open application shortcuts
+bindsym $mod+b exec brave-browser
+bindsym $mod+c exec code
+bindsym $mod+n exec nautilus
 bindsym $mod+Return exec $terminal
 
 # change focus
@@ -124,23 +124,9 @@ bindsym $mod+x split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-# bindsym $mod+s layout stacking
-# bindsym $mod+z layout tabbed
-bindsym $mod+e layout toggle split
-
-# reload the configuration file
-bindsym $mod+Shift+c reload
-
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-
-# 
-# TMP
-#
-# change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-#bindsym $mod+e layout toggle split
+bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -153,6 +139,12 @@ bindsym $mod+space focus mode_toggle
 
 # focus the child container
 # bindsym $mod+d focus child
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
 
 # switch to workspace
 # bindsym $mod+1 workspace 1
@@ -177,10 +169,6 @@ bindsym $mod+space focus mode_toggle
 # bindsym $mod+Shift+8 move container to workspace 8
 # bindsym $mod+Shift+9 move container to workspace 9
 # bindsym $mod+Shift+0 move container to workspace 10
-
-#
-# END TMP
-#
 
 # exit i3 (logout) (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -230,57 +218,39 @@ bar {
         workspace_buttons       yes
 
 	colors {
-	    background $black 
-	    statusline $white
-	    separator  $active
+	        background $black 
+                statusline $white
+                separator  $active
 
-	    focused_workspace  $active $active $white
-	    active_workspace   $bg     $active $white
-	    inactive_workspace $bg     $bg     #BFBFBF
-	    urgent_workspace   $red    $red    $white
-	    binding_mode       $red    $red    $white
+                focused_workspace  $active $active $white
+                active_workspace   $bg     $active $white
+                inactive_workspace $bg     $bg     #BFBFBF
+                urgent_workspace   $red    $red    $white
+                binding_mode       $red    $red    $white
 	}
 }
 
 #######################################################
-# Gaps
-#######################################################
-
-#  Border
-for_window [class=".*"] border pixel 4
-
-# Gaps
-gaps inner 16
-gaps outer 0
-
-#######################################################
 # Startup applications
-#
-# Tip
-# exec: on i3 init
-# exec_always: on i3 reload
 #######################################################
+
+# Restart
+exec_always --no-startup-id feh --bg-scale ~/dotfiles/assets/ubuntu-1.png 
+# exec --no-startup-id hsetroot -solid "#00000"
+
+# Startup
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-
-# TODO: The two following rules are identical ?
-# exec /usr/libexec/gnome-settings-daemon
-# exec --no-startup-id gnome-settings-daemon
-# exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
-# exec --no-startup-id hsetroot -solid "#00000"
-exec_always --no-startup-id feh --bg-scale ~/dotfiles/assets/ubuntu-1.png  
 exec --no-startup-id nordvpn connect spain
 exec --no-startup-id pulseaudio --start
 
 # TODO: Use the script and fix screen order
 # exec --no-startup-id sh ~/dotfiles/scripts/xrandr.sh
-exec --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-0 --off --output DP-1 --off --output HDMI-1 --mode 1920x1080 --pos 3840x0 --rotate normal --output HDMI-2 --mode 1920x1080 --pos 0x0 --rotate normal
+exec --no-startup-id $bin/setup_monitors
+# exec --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-0 --off --output DP-1 --off --output HDMI-1 --mode 1920x1080 --pos 3840x0 --rotate normal --output HDMI-2 --mode 1920x1080 --pos 0x0 --rotate normal
 
 # exec_always --no-startup-id killall picom
 exec --no-startup-id picom -b
