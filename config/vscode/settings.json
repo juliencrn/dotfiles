@@ -104,8 +104,12 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "standard.engine": "ts-standard",
-  "window.menuBarVisibility": "compact",
   "workbench.preferredDarkColorTheme": "Dracula",
   "workbench.tips.enabled": false,
-  "workbench.editor.labelFormat": "short"
+  "workbench.editor.labelFormat": "short",
+  "window.autoDetectColorScheme": true,
+  "breadcrumbs.enabled": false,
+  "window.menuBarVisibility": "hidden",
+  "workbench.statusBar.visible": false,
+  "gitlens.statusBar.dateFormat": ""
 }
