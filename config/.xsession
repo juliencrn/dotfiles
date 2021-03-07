@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-# ACTUALLY NOT USED - SEE ./bin/refresh
+#!/bin/bash
 
 # Setup monitors
 xrandr \
@@ -28,3 +26,7 @@ exec i3
 #xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-0 --off --output DP-1 --off --output HDMI-1 --mode 1920x1080 --pos 3840x0 --rotate normal --output HDMI-2 --mode 1920x1080 --pos 0x0 --rotate normal
 
 #feh --bg-scale ~/dotfiles/assets/ubuntu-1.png
+
+# exec i3
+
+# setxkbmap us -variant altgr-intl -option -option caps:escape -option eurosign:4
