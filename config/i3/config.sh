@@ -232,25 +232,29 @@ bar {
 
 #######################################################
 # Startup applications
+#
+# exec: triggered on startup
+# exec_always: triggered on restart
 #######################################################
 
-# Restart
-exec_always --no-startup-id feh --bg-scale ~/dotfiles/assets/ubuntu-1.png 
-# exec --no-startup-id hsetroot -solid "#00000"
+# VPM
+exec --no-startup-id nordvpn connect spain
 
-# Startup
+# Audio
+exec --no-startup-id pulseaudio --start
+
+# Transparency and box-shadow (ex Compton)
+exec --no-startup-id picom -b
+
+# Wallpaper
+exec --no-startup-id feh --bg-scale ~/dotfiles/assets/ubuntu-1.png
+
+# Monitors
+exec --no-startup-id $bin/setup_monitors
+
+# Keyboard
+exec --no-startup-id $bin/setup_keyboard
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-exec --no-startup-id nordvpn connect spain
-exec --no-startup-id pulseaudio --start
-
-# TODO: Use the script and fix screen order
-# exec --no-startup-id sh ~/dotfiles/scripts/xrandr.sh
-exec --no-startup-id $bin/setup_monitors
-# exec --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-0 --off --output DP-1 --off --output HDMI-1 --mode 1920x1080 --pos 3840x0 --rotate normal --output HDMI-2 --mode 1920x1080 --pos 0x0 --rotate normal
-
-# exec_always --no-startup-id killall picom
-exec --no-startup-id picom -b
