@@ -2,7 +2,8 @@
 
 configuration {
   // Features
-  modi: "drun,window,run,task:task,calc:qalc,file-browser,keys,combi";
+  modi: "combi,window,calc:qalc,file-browser,keys";
+  combi-modi: "drun,run";
   matching: "fuzzy";
   show-match: true;
   terminal: "gnome-terminal";
