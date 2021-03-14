@@ -13,15 +13,13 @@
 
 ```zsh
 sudo apt update
-sudo apt -y zsh i3 i3lock feh picom suckless-tools taskwarrior hsetroot fzf git curl wget nvim nvm gnome-sushi snapd dconf-cli pulseaudio alsa py3status
-sudo snap install brave code spotify vlc docker insomnia
+sudo apt -y zsh i3 i3lock feh picom suckless-tools taskwarrior fzf git curl wget nvim nvm gnome-sushi snapd dconf-cli pulseaudio alsa py3status tty-clock
 
-# TODO: Duplicated, I can remove this one ?
-# Setup symlinks
-sh ~/dotfiles/scripts/refresh-symlinks.sh
+sudo snap install brave code spotify vlc docker insomnia gdu-disk-usage-analyzer.gdu
 
-# Refresh zsh
-source ~/.zshrc
+npm install --global gtop
+
+
 
 # Set zsh as default shell
 chsh -s $(which zsh)
@@ -34,10 +32,12 @@ chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Setup symlinks
-sh ~/dotfiles/scripts/refresh-symlinks.sh
+# sh ~/dotfiles/scripts/refresh-symlinks.sh
+refresh
 
 # Refresh zsh
-source ~/.zshrc
+# source ~/.zshrc
+reload
 
 # Install PowerLevel10k theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k

@@ -13,6 +13,9 @@ alias svim="sudo vim"
 alias ciao="shutdown now"
 alias myip="curl http://ipecho.net/plain; echo"
 alias gg='google'
+alias now='tty-clock -cbs -f "%A %d %B %Y"'
+alias activity="gtop"
+alias gdu="gdu-disk-usage-analyzer.gdu"
 
 # System
 alias reload="source ~/.zshrc"
