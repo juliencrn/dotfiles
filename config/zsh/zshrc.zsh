@@ -57,5 +57,5 @@ export LANG=en_US.UTF-8
 # export ARCHFLAGS="-arch x86_64"
 
 # Preferred applications
-export TERMINAL="gnome-terminal"
+export TERMINAL="alacritty"
 # export EDITOR='vim'

@@ -7,7 +7,7 @@
 
 # set $mod Mod1
 set $mod Mod4
-set $terminal gnome-terminal # Or gnome-terminal
+set $terminal alacritty # Or gnome-terminal
 set $bin ~/dotfiles/bin
 
 # use these keys for focus, movement, and resize directions when reaching for

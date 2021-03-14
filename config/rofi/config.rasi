@@ -6,7 +6,7 @@ configuration {
   combi-modi: "drun,run";
   matching: "fuzzy";
   show-match: true;
-  terminal: "gnome-terminal";
+  terminal: "alacritty";
   run-command: "zsh -c '{cmd}'";
   run-list-command: "zsh -c rofi-scripts";
   

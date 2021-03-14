@@ -41,6 +41,9 @@ mkdir -p $CONFIG/Code/User
 symlink $DOT_CONFIG/vscode/settings.json $CONFIG/Code/User/settings.json
 symlink $DOT_CONFIG/vscode/keybindings.json $CONFIG/Code/User/keybindings.json
 
+# alacritty terminal
+mkdir -p $CONFIG/alacritty
+symlink $DOT_CONFIG/alacritty/alacritty.yml $CONFIG/alacritty/alacritty.yml
 # i3
 mkdir -p $CONFIG/i3
 mkdir -p $CONFIG/i3status

@@ -97,6 +97,13 @@ I3 is a tiny windows manager
 sudo apt install i3
 ```
 
+# Alacritty terminal
+```zsh
+sudo add-apt-repository ppa:aslatter/ppa
+sudo apt update
+sudo apt install alacritty
+```
+
 ## Rofi 1.6
 
 ```zsh
