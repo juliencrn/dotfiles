@@ -18,6 +18,7 @@ set $left h
 set $right l
 
 # Dracula colors
+set $transparent #00000050
 set $black #000000
 set $bg #282a36
 set $active #44475a
@@ -76,7 +77,8 @@ bindsym $mod+p exec --no-startup-id $bin/screenshot
 bindsym $mod+q kill
 
 # NAVIGATION using Rofi
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec rofi -show combi
+bindsym Shift+Tab exec rofi -show window
 
 # bindsym $mod+d exec --no-startup-id "dmenu_extended_run"
 # bindsym $mod+Shift+d exec "dmenu_run -nf '#F8F8F2' -nb '$black' -sb '$green' -sf '$black' -fn 'Fira Code-10' -l 16 -h 20"
@@ -134,6 +136,9 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
 # focus the parent container
 # bindsym $mod+a focus parent
 
@@ -146,29 +151,65 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
+# customize workspace name
+# Terminal
+set $WS1 
+workspace $WS1 output HDMI-2
+
+# Code
+set $WS2 
+workspace $WS2 output HDMI-2
+
+# Chrome icon -> web
+set $WS3 
+workspace $WS3 output HDMI-0
+
+# Folder
+set $WS4 
+workspace $WS4 output HDMI-2
+
+# Download
+set $WS5 
+workspace $WS5 output HDMI-2
+
+# assign [class="Nautilus"] $WS4
+# for_window [class="Nautilus"] floating enable, resize set 1200 px 800 px, move position center
+
+# set $WS5    # Play
+# set $WS6    # Chat
+# set $WS9    # Settings
+# set $WS0    # Play
+
 # switch to workspace
-# bindsym $mod+1 workspace 1
-# bindsym $mod+2 workspace 2
-# bindsym $mod+3 workspace 3
-# bindsym $mod+4 workspace 4
-# bindsym $mod+5 workspace 5
-# bindsym $mod+6 workspace 6
-# bindsym $mod+7 workspace 7
-# bindsym $mod+8 workspace 8
-# bindsym $mod+9 workspace 9
-# bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace $WS1
+bindsym $mod+2 workspace $WS2
+bindsym $mod+3 workspace $WS3
+bindsym $mod+4 workspace $WS4
+bindsym $mod+5 workspace $WS5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 0
 
 # move focused container to workspace
-# bindsym $mod+Shift+1 move container to workspace 1
-# bindsym $mod+Shift+2 move container to workspace 2
-# bindsym $mod+Shift+3 move container to workspace 3
-# bindsym $mod+Shift+4 move container to workspace 4
-# bindsym $mod+Shift+5 move container to workspace 5
-# bindsym $mod+Shift+6 move container to workspace 6
-# bindsym $mod+Shift+7 move container to workspace 7
-# bindsym $mod+Shift+8 move container to workspace 8
-# bindsym $mod+Shift+9 move container to workspace 9
-# bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace $WS1
+bindsym $mod+Shift+2 move container to workspace $WS2
+bindsym $mod+Shift+3 move container to workspace $WS3
+bindsym $mod+Shift+4 move container to workspace $WS4
+bindsym $mod+Shift+5 move container to workspace $WS5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 0
+
+# workspace_auto_back_and_forth yes
+# force_display_urgency_hint 0 ms
+# focus_on_window_activation urgent
+
+# floating_minimum_size -1 x -1
+# floating_maximum_size -1 x -1
 
 # exit i3 (logout) (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -218,16 +259,18 @@ bar {
         workspace_buttons       yes
 
 	colors {
-	        background $black 
+	        background $transparent 
                 statusline $white
                 separator  $active
 
-                focused_workspace  $active $active $white
-                active_workspace   $bg     $active $white
-                inactive_workspace $bg     $bg     #BFBFBF
-                urgent_workspace   $red    $red    $white
-                binding_mode       $red    $red    $white
+                focused_workspace  $transparent $transparent $green
+                active_workspace   $transparent $transparent $white
+                inactive_workspace $transparent $transparent $comment
+                urgent_workspace   $transparent $transparent $red
+                binding_mode       $transparent $transparent $red
 	}
+
+        i3bar_command i3bar -t
 }
 
 #######################################################
@@ -236,6 +279,9 @@ bar {
 # exec: triggered on startup
 # exec_always: triggered on restart
 #######################################################
+
+# Open softwares in workspaces
+# exec_always --no-startup-id i3-msg "workspace $WS5; exec nautilus -s $HOME/Downloads/; workspace $WS1;"
 
 # VPM
 exec --no-startup-id nordvpn connect spain
