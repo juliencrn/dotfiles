@@ -52,8 +52,3 @@ symlink $DOT_CONFIG/i3/picom.conf $CONFIG/picom/picom.conf
 # Navigation
 mkdir -p $CONFIG/rofi
 symlink $DOT_CONFIG/rofi/config.rasi $CONFIG/rofi/config.rasi
-
-# mkdir -p $CONFIG/dmenu-extended/config
-# symlink $DOT_CONFIG/dmenu-extended/preferences.json $CONFIG/dmenu-extended/config/dmenuExtended_preferences.txt
-# symlink $DOT_CONFIG/dmenu-extended/internetSearch.json $CONFIG/dmenu-extended/config/internetSearch.json 
-# symlink $DOT_CONFIG/dmenu-extended/dmenu_projects.json $CONFIG/dmenu-extended/config/dmenu_projects.json

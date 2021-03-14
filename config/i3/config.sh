@@ -80,12 +80,6 @@ bindsym $mod+q kill
 bindsym $mod+d exec rofi -show combi
 bindsym Shift+Tab exec rofi -show window
 
-# bindsym $mod+d exec --no-startup-id "dmenu_extended_run"
-# bindsym $mod+Shift+d exec "dmenu_run -nf '#F8F8F2' -nb '$black' -sb '$green' -sf '$black' -fn 'Fira Code-10' -l 16 -h 20"
-# bindsym $mod+a exec "rofi -combi-modi window,drun,run,keys -show combi -modi combi -terminal $terminal -matching fuzzy -sidebar-mode"
-# bindsym $mod+Shift+a exec --no-startup-id sh ~/dotfiles/config/rofi/launch.sh
-# bindsym $mod+Tab exec "rofi -show window"
-
 # Open application shortcuts
 bindsym $mod+b exec brave-browser
 bindsym $mod+c exec code

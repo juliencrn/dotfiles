@@ -13,7 +13,7 @@
 
 ```zsh
 sudo apt update
-sudo apt -y zsh tig i3 i3lock feh picom suckless-tools taskwarrior fzf git curl wget vim nvm gnome-sushi snapd dconf-cli pulseaudio alsa py3status tty-clock
+sudo apt -y zsh tig i3 i3lock feh picom taskwarrior fzf git curl wget vim nvm gnome-sushi snapd dconf-cli pulseaudio alsa py3status tty-clock
 
 sudo snap install brave code spotify vlc docker insomnia gdu-disk-usage-analyzer.gdu
 
@@ -107,14 +107,4 @@ sudo apt install rofi
 
 
 https://draculatheme.com/insomnia/
-
-## dmenu extended
-
-```
-git clone https://github.com/MarkHedleyJones/dmenu-extended
-cd dmenu
-sudo python setup.py install
-dmenu_extended_run
-```
-
 
