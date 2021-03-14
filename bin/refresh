@@ -36,6 +36,7 @@ symlink $DOT_CONFIG/gtk-3.0/gtk.css $CONFIG/gtk-3.0/gtk.css
 # VSCode
 mkdir -p $CONFIG/Code/User
 symlink $DOT_CONFIG/vscode/settings.json $CONFIG/Code/User/settings.json
+symlink $DOT_CONFIG/vscode/keybindings.json $CONFIG/Code/User/keybindings.json
 
 # i3
 mkdir -p $CONFIG/i3
