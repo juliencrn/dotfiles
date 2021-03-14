@@ -24,9 +24,12 @@ symlink $DOT_CONFIG/zsh/zshenv.zsh $HOME/.zshenv
 symlink $DOT_CONFIG/zsh/zshrc.zsh $HOME/.zshrc
 
 # vim
-mkdir -p $CONFIG/nvim
-symlink $DOT_CONFIG/nvim/init.vim $CONFIG/nvim/init.vim
-symlink $DOT_CONFIG/nvim/coc-settings.json $CONFIG/nvim/coc-settings.json
+mkdir -p $HOME/.vim
+mkdir -p $HOME/.vim/config
+symlink $DOT_CONFIG/vim/vimrc.vim $HOME/.vimrc
+symlink $DOT_CONFIG/vim/config/explorer.vim $HOME/.vim/config/explorer.vim
+symlink $DOT_CONFIG/vim/config/plugins.vim $HOME/.vim/config/plugins.vim
+symlink $DOT_CONFIG/vim/coc-settings.json $HOME/.vim/coc-settings.json
 
 # Gnome theme
 mkdir -p $CONFIG/gtk-3.0

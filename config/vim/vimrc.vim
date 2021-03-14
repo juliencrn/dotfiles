@@ -5,8 +5,8 @@
 "
 
 " Plugins
-source ~/dotfiles/config/nvim/config/plugins.vim
-source ~/dotfiles/config/nvim/config/explorer.vim
+source $HOME/.vim/config/plugins.vim
+source $HOME/.vim/config/explorer.vim
 
 " From "Mastering Vim Quickly" book
 set nocompatible          " Use Vim settings, rather than Vi settings

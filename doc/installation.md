@@ -13,7 +13,7 @@
 
 ```zsh
 sudo apt update
-sudo apt -y zsh i3 i3lock feh picom suckless-tools taskwarrior fzf git curl wget nvim nvm gnome-sushi snapd dconf-cli pulseaudio alsa py3status tty-clock
+sudo apt -y zsh tig i3 i3lock feh picom suckless-tools taskwarrior fzf git curl wget vim nvm gnome-sushi snapd dconf-cli pulseaudio alsa py3status tty-clock
 
 sudo snap install brave code spotify vlc docker insomnia gdu-disk-usage-analyzer.gdu
 
