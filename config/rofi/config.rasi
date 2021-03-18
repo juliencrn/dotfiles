@@ -2,7 +2,7 @@
 
 configuration {
   // Features
-  modi: "combi,window,calc:qalc,file-browser,keys";
+  modi: "combi,window,calc:qalc,keys";
   combi-modi: "drun,run";
   matching: "fuzzy";
   show-match: true;

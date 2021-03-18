@@ -7,14 +7,13 @@
   "sync.quietSync": true,
   "sync.gist": "1d252ff3ddcd9ccce8a96e001590e193",
   "workbench.iconTheme": "material-icon-theme",
-  "php.validate.executablePath": "/usr/bin/php",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.shell.linux": "/usr/bin/zsh",
   "terminal.integrated.automationShell.osx": "",
   "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.fontFamily": "DroidSansMono Nerd Font",
+  "terminal.integrated.fontFamily": "'MesloLGS NF', 'Fira Code','Font Awesome', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "git.enableSmartCommit": true,
   "explorer.confirmDragAndDrop": false,
@@ -111,5 +110,7 @@
   "breadcrumbs.enabled": false,
   "window.menuBarVisibility": "hidden",
   "workbench.statusBar.visible": false,
-  "gitlens.statusBar.dateFormat": ""
+  "gitlens.statusBar.dateFormat": "",
+  "terminal.integrated.automationShell.linux": "zsh",
+  "terminal.integrated.automationShell.windows": ""
 }

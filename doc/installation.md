@@ -79,6 +79,12 @@ cd ~/.gnome-terminal
 ./install.sh
 ```
 
+# I3
+```zsh
+sudo add-apt-repository ppa:kgilmer/speed-ricer
+install i3-gaps
+```
+
 ## FZF 
 FZF or "Fuzzy Finder" is used by zsh and vim
 

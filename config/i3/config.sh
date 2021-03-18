@@ -78,7 +78,7 @@ bindsym $mod+q kill
 
 # NAVIGATION using Rofi
 bindsym $mod+d exec rofi -show combi
-bindsym Shift+Tab exec rofi -show window
+# bindsym Shift+Tab exec rofi -show window
 
 # Open application shortcuts
 bindsym $mod+b exec brave-browser
