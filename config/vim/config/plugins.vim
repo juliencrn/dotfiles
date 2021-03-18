@@ -17,6 +17,9 @@ call plug#begin("~/.vim/plugged")
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
 
+		" Git
+		Plug 'tpope/vim-fugitive'
+
     " JS/TS Syntax
     Plug 'pangloss/vim-javascript'
     Plug 'leafgarland/typescript-vim'
