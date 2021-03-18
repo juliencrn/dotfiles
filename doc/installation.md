@@ -13,16 +13,26 @@
 
 ```zsh
 sudo apt update
-sudo apt -y zsh tig i3 i3lock feh picom taskwarrior fzf git curl wget vim nvm gnome-sushi snapd dconf-cli pulseaudio alsa py3status tty-clock
+sudo apt -y zsh tree fd-find bat tig deborphan i3lock feh picom taskwarrior fzf git curl wget vim nvm gnome-sushi snapd dconf-cli pulseaudio alsa py3status tty-clock
 
 sudo snap install brave code spotify vlc docker insomnia gdu-disk-usage-analyzer.gdu
 
 npm install --global gtop
 
-
+# Vim 8.2
+```zsh
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt update
+sudo apt install vim
+```
 
 # Set zsh as default shell
 chsh -s $(which zsh)
+
+# rename binaries using symlinks 
+ln -s $(which fdfind) ~/.local/bin/fd
+ln -s $(which batcat) ~/.local/bin/bat
+
 ```
 
 ## Oh-my-zsh

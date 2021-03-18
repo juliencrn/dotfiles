@@ -69,17 +69,15 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
-" SEARCH FILE
+" Fuzzy finder using FZF
+" Map Ctrl-P to access files
 nnoremap <C-p> :FZF<CR>
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'vsplit',
-  \ 'ctrl-v': 'split'
-  \}
 
-" Exclude from search .gitignored files
-" TODO: Exclude .gitignored files like node_modules/*
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+" Layout position centered
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
+
+" FZF Options and preview using batcat (bat)
+let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:40%' --layout reverse --preview 'bat --color=always --style=grid --line-range :300 {}'"
 
 " Make Vim as smart as VSCode
 let g:coc_global_extensions = ['coc-html', 'coc-css', 'coc-json', 'coc-tsserver', 'coc-svg', 'coc-yaml', 'coc-emmet', 'coc-highlight', 'coc-stylelint', 'coc-spell-checker']
