@@ -20,8 +20,8 @@ window:
   # Specified in number of columns/lines, not pixels. If both are zero this
   # setting is ignored.
   dimensions:
-    columns: 100
-    lines: 85
+    columns: 120
+    lines: 42
 
   # Window padding (changes require restart)
   #
@@ -68,26 +68,17 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-  #   family: Iosevka
-  #   style: Light
     family: "Fira Code"
-    # family: "Source Code Pro"
-    # style: Retina
+    style: Retina
 
   # The bold font face
   bold:
-  #   family: Iosevka
-  #   style: Medium
-    family: "Fira Code Bold"
-    # family: "Source Code Pro"
+    style: Medium
+    family: "Fira Code"
 
   # The italic font face
-  italic:
-  #   family: Iosevka
-  #   style: "Light Italic"
-    # style: "Light Oblique"
-    family: "Fira Code Italic"
-    # family: "Source Code Pro"
+  # italic:
+    # family: "Fira Code"
     # style: "Medium Italic"
 
   # Point size of the font
@@ -310,6 +301,7 @@ key_bindings:
   - { key: V,        mods: Control,       action: Paste                        }
   - { key: C,        mods: Control,       action: Copy                         }
   - { key: Q,        mods: Control,       action: Quit                         }
+  - { key: C,        mods: Control|Shift, chars: "\x03"                         }
   # - { key: N,        mods: Command,       action: SpawnNewInstance             }
   # - { key: Return,   mods: Command,       action: ToggleFullscreen             }
 
