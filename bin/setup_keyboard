@@ -3,5 +3,7 @@
 setxkbmap us \
     -variant altgr-intl \
     -option \
-    -option caps:escape \
+    -option ctrl:nocaps \
     -option eurosign:4
+
+# -option caps:escape \

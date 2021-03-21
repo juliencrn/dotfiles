@@ -17,6 +17,17 @@ alias now='tty-clock -cbs -f "%A %d %B %Y"'
 alias activity="gtop"
 alias gdu="gdu-disk-usage-analyzer.gdu"
 
+# Quick access to projects
+alias cc="cd ~/www/chefclub"
+alias df="cd ~/dotfiles"
+alias uh="cd ~/www/usehooks"
+
+# Tmux
+alias t="tmux"
+alias ta="t a -t" # attach | go to existing session
+alias tls="t ls" # list sessions
+alias tn="t new -t" # Create session
+
 # System
 alias reload="source ~/.zshrc"
 alias install="sudo apt-get install"
