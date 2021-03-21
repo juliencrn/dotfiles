@@ -29,6 +29,8 @@ mkdir -p $HOME/.vim/config
 symlink $DOT_CONFIG/vim/vimrc.vim $HOME/.vimrc
 symlink $DOT_CONFIG/vim/config/explorer.vim $HOME/.vim/config/explorer.vim
 symlink $DOT_CONFIG/vim/config/plugins.vim $HOME/.vim/config/plugins.vim
+symlink $DOT_CONFIG/vim/config/ide.vim $HOME/.vim/config/ide.vim
+symlink $DOT_CONFIG/vim/config/search.vim $HOME/.vim/config/search.vim
 symlink $DOT_CONFIG/vim/coc-settings.json $HOME/.vim/coc-settings.json
 
 # Tmux (terminal multiplexer)

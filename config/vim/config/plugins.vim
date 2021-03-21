@@ -13,7 +13,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'dracula/vim'
     Plug 'vim-airline/vim-airline' 
 
-    " TODO: Check built-in feature
+    " Fuzzy search
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
 
@@ -27,6 +27,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'herringtondarkholme/yats.vim'
     Plug 'maxmellon/vim-jsx-pretty'
     Plug 'jparise/vim-graphql'
+    " Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
     "VSCode Intellisence
     Plug 'neoclide/coc.nvim', { 'branch': 'release' }
