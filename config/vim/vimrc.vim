@@ -59,19 +59,28 @@ augroup SyntaxSettings
     autocmd BufNewFile,BufRead *.tsx set filetype=typescript
 augroup END
 
-" use alt+hjkl to move between split/vsplit panels
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
+" use Crtl+hjkl to move between split/vsplit panels
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Fuzzy finder using FZF
-" Map Ctrl-P to access files
+" Ctrl-P: Search files 
 nnoremap <C-p> :FZF<CR>
+
+" Ctrl-F: Search in files
+nnoremap <C-F> :Rg<CR>
+
+" Ctrl-f: Search in current file
+nnoremap <C-f> /
+
+" Crtl-s: Save current file
+nnoremap <C-s> :w<CR>
+
+" TODO: I'm not sure for the following line
+" See: https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko#finding-in-files
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " Layout position centered
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
