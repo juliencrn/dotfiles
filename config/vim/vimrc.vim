@@ -44,3 +44,11 @@ nnoremap <C-l> <C-w>l
 
 " Crtl-s: Save current file
 nnoremap <C-s> :w<CR>
+
+" Shortcuts
+nnoremap <leader>\| :vsplit<CR>
+nnoremap <leader>- :split<CR>
+
+" Open new split panes to right and bottom
+set splitbelow
+set splitright
