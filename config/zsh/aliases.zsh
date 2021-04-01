@@ -17,6 +17,18 @@ alias now='tty-clock -cbs -f "%A %d %B %Y"'
 alias activity="gtop"
 alias gdu="gdu-disk-usage-analyzer.gdu"
 
+# Git (We already have aliases from the zsh's git plugin)
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias gcop="git checkout -"
+# alias gpush='git push -u origin "$(git branch --show-current)"'
+# alias gpull='git pull origin "${(git branch --show-current)}"'
+alias gls="git log --pretty=format:\"%C(yellow)%h%Cblue%d\\ %Creset%s%Cgreen\\ [%cn]\" --decorate"
+alias gc="git commit -m"
+alias grb="git rebase"
+alias grbm="git rebase master"
+alias grbi="git rebase -i"
+
 # Quick access to projects
 alias cc="cd ~/www/chefclub"
 alias df="cd ~/dotfiles"
