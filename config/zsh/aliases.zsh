@@ -16,6 +16,7 @@ alias gg='google'
 alias now='tty-clock -cbs -f "%A %d %B %Y"'
 alias activity="gtop"
 alias gdu="gdu-disk-usage-analyzer.gdu"
+alias open="xdg-open"
 
 # Git (We already have aliases from the zsh's git plugin)
 alias gco="git checkout"
