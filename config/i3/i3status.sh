@@ -22,6 +22,7 @@ conky {
 
 # order += "window"
 order += "tztime paris"
+order += "getjson btc_price"
 order += "volume master"
 # order += "taskwarrior"
 # order += "xscreensaver"
@@ -47,6 +48,13 @@ order += "whatismyip"
 
 
 # Modules
+getjson btc_price {
+  color = '#f1fa8c'
+	url = "https://api.coindesk.com/v1/bpi/currentprice.json"
+	format = "BTC {bpi-EUR-rate_float} €"
+	delimiter = "-"
+	#cache_timeout = 900 # 15 minutes
+}
 
 # display total number of processes and running processes
 conky proc {

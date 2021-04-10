@@ -13,7 +13,7 @@
 
 ```zsh
 sudo apt update
-sudo apt -y zsh tree fd-find ripgrep bat tig deborphan i3lock feh picom taskwarrior fzf git curl wget vim nvm gnome-sushi snapd dconf-cli pulseaudio alsa py3status tty-clock dunst tmux conky
+sudo apt -y jq zsh tree fd-find ripgrep bat tig deborphan i3lock feh picom taskwarrior fzf git curl wget vim nvm gnome-sushi snapd dconf-cli pulseaudio alsa py3status tty-clock dunst tmux conky
 
 sudo snap install brave code spotify vlc docker insomnia gdu-disk-usage-analyzer.gdu
 
