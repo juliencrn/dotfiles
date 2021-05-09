@@ -147,24 +147,24 @@ bindsym $mod+Shift+r restart
 
 # customize workspace name
 # Terminal
-set $WS1 
-workspace $WS1 output HDMI-2
+# set $WS1 
+# workspace $WS1 output HDMI-2
 
 # Code
-set $WS2 
-workspace $WS2 output HDMI-2
+# set $WS2 
+# workspace $WS2 output HDMI-2
 
 # Chrome icon -> web
-set $WS3 
-workspace $WS3 output HDMI-0
+# set $WS3 
+# workspace $WS3 output HDMI-0
 
 # Folder
-set $WS4 
-workspace $WS4 output HDMI-2
+# set $WS4 
+# workspace $WS4 output HDMI-2
 
 # Download
-set $WS5 
-workspace $WS5 output HDMI-2
+# set $WS5 
+# workspace $WS5 output HDMI-2
 
 # assign [class="Nautilus"] $WS4
 # for_window [class="Nautilus"] floating enable, resize set 1200 px 800 px, move position center
@@ -175,11 +175,11 @@ workspace $WS5 output HDMI-2
 # set $WS0    # Play
 
 # switch to workspace
-bindsym $mod+1 workspace $WS1
-bindsym $mod+2 workspace $WS2
-bindsym $mod+3 workspace $WS3
-bindsym $mod+4 workspace $WS4
-bindsym $mod+5 workspace $WS5
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -187,11 +187,11 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 0
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $WS1
-bindsym $mod+Shift+2 move container to workspace $WS2
-bindsym $mod+Shift+3 move container to workspace $WS3
-bindsym $mod+Shift+4 move container to workspace $WS4
-bindsym $mod+Shift+5 move container to workspace $WS5
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
