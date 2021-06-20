@@ -49,6 +49,9 @@ nnoremap <C-s> :w<CR>
 nnoremap <leader>\| :vsplit<CR>
 nnoremap <leader>- :split<CR>
 
+" Toggle comment the current line
+nnoremap <leader>/ :TComment<CR>
+
 " Open new split panes to right and bottom
 set splitbelow
 set splitright

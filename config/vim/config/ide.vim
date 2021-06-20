@@ -11,6 +11,23 @@ set cmdheight=2           " Give more space for displaying messages.
 set hidden                " Hide buffers instead of closing them
 " *****************************************
 
+" Rust
+let g:rustfmt_autosave = 1
+
+autocmd BufNewFile,BufRead *.rs set filetype=rust
+
+let g:ale_linters = {
+\  'rust': ['analyzer'],
+\}
+
+let g:ale_fixers = { 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'] }
+
+" Optional, configure as-you-type completions
+set completeopt=menu,menuone,preview,noselect,noinsert
+let g:ale_completion_enabled = 1
+
+nnoremap <C-LeftMouse> :ALEGoToDefinition<CR>
+
 " peitalin/vim-jsx-typescript
 " set filetypes as typescriptreact
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact

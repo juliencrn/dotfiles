@@ -14,7 +14,6 @@ DOT_CONFIG="$HOME/dotfiles/config"
 
 # Base
 symlink $DOT_CONFIG/.gitconfig $HOME/.gitconfig
-symlink $DOT_CONFIG/.Xresources $HOME/.Xresources
 
 # zsh (Shell)
 symlink $DOT_CONFIG/zsh/aliases.zsh $HOME/.aliases
@@ -36,32 +35,6 @@ symlink $DOT_CONFIG/vim/coc-settings.json $HOME/.vim/coc-settings.json
 # Tmux (terminal multiplexer)
 symlink $DOT_CONFIG/tmux/tmux.conf $HOME/.tmux.conf
 
-# Theme GTK
-mkdir -p $CONFIG/gtk-3.0
-symlink $DOT_CONFIG/gtk-3.0/settings.ini $CONFIG/gtk-3.0/settings.ini
-symlink $DOT_CONFIG/gtk-3.0/gtk.css $CONFIG/gtk-3.0/gtk.css
-
-# VSCode (Editor)
-mkdir -p $CONFIG/Code/User
-symlink $DOT_CONFIG/vscode/settings.json $CONFIG/Code/User/settings.json
-symlink $DOT_CONFIG/vscode/keybindings.json $CONFIG/Code/User/keybindings.json
-
 # alacritty (Terminal)
 mkdir -p $CONFIG/alacritty
 symlink $DOT_CONFIG/alacritty/alacritty.yml $CONFIG/alacritty/alacritty.yml
-
-# i3 (Window tiling)
-mkdir -p $CONFIG/i3
-mkdir -p $CONFIG/i3status
-mkdir -p $CONFIG/picom
-symlink $DOT_CONFIG/i3/config.sh $CONFIG/i3/config
-symlink $DOT_CONFIG/i3/i3status.sh $CONFIG/i3status/config
-symlink $DOT_CONFIG/i3/picom.conf $CONFIG/picom/picom.conf
-
-# dunst (Notifications)
-mkdir -p $CONFIG/dunst
-symlink $DOT_CONFIG/dunst/dunstrc $CONFIG/dunst/dunstrc
-
-# Rofi (Navigation)
-mkdir -p $CONFIG/rofi
-symlink $DOT_CONFIG/rofi/config.rasi $CONFIG/rofi/config.rasi

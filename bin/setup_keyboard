@@ -1,9 +1,0 @@
-#!/bin/sh
-
-setxkbmap us \
-    -variant altgr-intl \
-    -option \
-    -option ctrl:nocaps \
-    -option eurosign:4
-
-# -option caps:escape \

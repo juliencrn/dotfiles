@@ -20,6 +20,14 @@ call plug#begin("~/.vim/plugged")
 		" Git
 		Plug 'tpope/vim-fugitive'
 
+    " Programming
+    Plug 'tomtom/tcomment_vim'
+    " Plug 'dense-analysis/ale'
+    Plug 'vim-syntastic/syntastic'
+
+    " Rust
+    Plug 'rust-lang/rust.vim'
+
     " JS/TS Syntax
     Plug 'pangloss/vim-javascript'
     Plug 'leafgarland/typescript-vim'
