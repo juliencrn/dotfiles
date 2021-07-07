@@ -14,14 +14,15 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-#env:
+env:
   # TERM variable
   #
   # This value is used to set the `$TERM` environment variable for
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  #TERM: alacritty
+  # TERM: alacritty
+  TERM: xterm-256color
 
 window:
   # Window dimensions (changes require restart)
@@ -29,9 +30,9 @@ window:
   # Number of lines/columns (not pixels) in the terminal. The number of columns
   # must be at least `2`, while using a value of `0` for columns and lines will
   # fall back to the window manager's recommended size.
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  dimensions:
+    columns: 120
+    lines: 40
 
   # Window position (changes require restart)
   #
@@ -46,11 +47,11 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-   x: 16
-   y: 16
+   x: 6
+   y: 6
 
   # Spread additional padding evenly around the terminal content.
-  #dynamic_padding: false
+  dynamic_padding: true
 
   # Window decorations
   #
@@ -61,7 +62,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  # decorations: none
+  decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -103,11 +104,8 @@ window:
 
 # Font configuration
 font:
-  normal:
-    family: "MesloLGS NF"
-#font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
@@ -115,20 +113,23 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     #family: monospace
+    family: "FiraCode Nerd Font"
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
+    style: Retina
 
   # Bold font face
-  #bold:
+  bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
     #family: monospace
+    family: "FiraCode Nerd Font"
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    style: Bold
 
   # Italic font face
   #italic:
@@ -153,7 +154,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 12.0
+  size: 13.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -173,65 +174,146 @@ font:
   #
   # Thin strokes are suitable for retina displays, but for non-retina screens
   # it is recommended to set `use_thin_strokes` to `false`.
-  #use_thin_strokes: true
+  use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
 colors:
+  # Default colors
   primary:
-    background: '0x282a36'
-    foreground: '0xf8f8f2'
+    background: '#282a36'
+    foreground: '#f8f8f2'
+
+    # Bright and dim foreground colors
+    #
+    # The dimmed foreground color is calculated automatically if it is not
+    # present. If the bright foreground color is not set, or
+    # `draw_bold_text_with_bright_colors` is `false`, the normal foreground
+    # color will be used.
+    #dim_foreground: '#828482'
+    #bright_foreground: '#eaeaea'
+
+  # Cursor colors
+  #
+  # Colors which should be used to draw the terminal cursor.
+  #
+  # Allowed values are CellForeground/CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
   cursor:
-    text: CellBackground
-    cursor: CellForeground
+   text: '#282a36'
+   cursor: '#f8f8f2'
+
+  # Vi mode cursor colors
+  #
+  # Colors for the cursor when the vi mode is active.
+  #
+  # Allowed values are CellForeground/CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
   vi_mode_cursor:
-    text: CellBackground
-    cursor: CellForeground
+   text: '#282a36'
+   cursor: '#f8f8f2'
+
+  # Search colors
+  #
+  # Colors used for the search bar and match highlighting.
   search:
+    # Allowed values are CellForeground/CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
     matches:
-      foreground: '0x44475a'
-      background: '0x50fa7b'
+      foreground: '#44475a'
+      background: '#50fa7b'
     focused_match:
-      foreground: '0x44475a'
-      background: '0xffb86c'
+      foreground: '#44475a'
+      background: '#ffb86c'
     bar:
-      background: '0x282a36'
-      foreground: '0xf8f8f2'
+      background: '#282a36'
+      foreground: '#f8f8f2'
+
+  # Keyboard regex hints
+  #hints:
+    # First character in the hint label
+    #
+    # Allowed values are CellForeground/CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
+    #start:
+    #  foreground: '#1d1f21'
+    #  background: '#e9ff5e'
+
+    # All characters after the first one in the hint label
+    #
+    # Allowed values are CellForeground/CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
+    #end:
+    #  foreground: '#e9ff5e'
+    #  background: '#1d1f21'
+
+  # Line indicator
+  #
+  # Color used for the indicator displaying the position in history during
+  # search and vi mode.
+  #
+  # By default, these will use the opposing primary color.
   line_indicator:
-    foreground: None
-    background: None
+   foreground: None
+   background: None
+
+  # Selection colors
+  #
+  # Colors which should be used to draw the selection area.
+  #
+  # Allowed values are CellForeground/CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
   selection:
-    text: CellForeground
-    background: '0x44475a'
+    text: '#f8f8f2'
+    background: '#44475a'
+
+  # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xff5555'
-    green:   '0x50fa7b'
-    yellow:  '0xf1fa8c'
-    blue:    '0xbd93f9'
-    magenta: '0xff79c6'
-    cyan:    '0x8be9fd'
-    white:   '0xf8f8f2'
+    black:   '#000000'
+    red:     '#ff5555'
+    green:   '#50fa7b'
+    yellow:  '#f1fa8c'
+    blue:    '#bd93f9'
+    magenta: '#ff79c6'
+    cyan:    '#8be9fd'
+    white:   '#f8f8f2'
+
+  # Bright colors
   bright:
-    black:   '0x4d4d4d'
-    red:     '0xff6e67'
-    green:   '0x5af78e'
-    yellow:  '0xf4f99d'
-    blue:    '0xcaa9fa'
-    magenta: '0xff92d0'
-    cyan:    '0x9aedfe'
-    white:   '0xe6e6e6'
+    black:   '#4d4d4d'
+    red:     '#ff6e67'
+    green:   '#5af78e'
+    yellow:  '#f4f99d'
+    blue:    '#caa9fa'
+    magenta: '#ff92d0'
+    cyan:    '#9aedfe'
+    white:   '#e6e6e6'
+
+  # Dim colors
+  #
+  # If the dim colors are not set, they will be calculated automatically based
+  # on the `normal` colors.
   dim:
-    black:   '0x14151b'
-    red:     '0xff2222'
-    green:   '0x1ef956'
-    yellow:  '0xebf85b'
-    blue:    '0x4d5b86'
-    magenta: '0xff46b0'
-    cyan:    '0x59dffc'
-    white:   '0xe6e6d1'
+    black:   '#14151b'
+    red:     '#ff2222'
+    green:   '#1ef956'
+    yellow:  '#ebf85b'
+    blue:    '#4d5b86'
+    magenta: '#ff46b0'
+    cyan:    '#59dffc'
+    white:   '#e6e6d1'
+
+  # Indexed Colors
+  #
+  # The indexed colors include all colors from 16 to 256.
+  # When these are not set, they're filled with sensible defaults.
+  #
+  # Example:
+  #   `- { index: 16, color: '#ff00ff' }`
+  #
+  #indexed_colors: []
 
 # Bell
 #
@@ -280,13 +362,13 @@ colors:
 # The value `0.0` is completely transparent and `1.0` is opaque.
 #background_opacity: 1.0
 
-#selection:
+selection:
   # This string contains all characters that are used as separators for
   # "semantic words" in Alacritty.
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  #save_to_clipboard: false
+  save_to_clipboard: true
 
 #cursor:
   # Cursor style
@@ -340,10 +422,10 @@ live_config_reload: true
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
-#  args:
-#    - --login
+shell:
+  program: /opt/homebrew/bin/zsh
+  args:
+    - -l
 
 # Startup directory
 #
@@ -354,7 +436,7 @@ live_config_reload: true
 # Send ESC (\x1b) before characters when alt is pressed.
 #alt_send_esc: true
 
-#mouse:
+mouse:
   # Click settings
   #
   # The `double_click` and `triple_click` settings control the time
@@ -364,7 +446,7 @@ live_config_reload: true
   #triple_click: { threshold: 300 }
 
   # If this is `true`, the cursor is temporarily hidden when typing.
-  #hide_when_typing: false
+  hide_when_typing: true
 
 # Regex hints
 #
@@ -379,8 +461,8 @@ live_config_reload: true
   # Each hint must have a `regex` and either an `action` or a `command` field.
   # The fields `mouse`, `binding` and `post_processing` are optional.
   #
-  # The fields `command`, `binding.key`, `binding.mods` and `mouse.mods` accept
-  # the same values as they do in the `key_bindings` section.
+  # The fields `command`, `binding.key`, `binding.mods`, `binding.mode` and 
+  # `mouse.mods` accept the same values as they do in the `key_bindings` section.
   #
   # The `mouse.enabled` field controls if the hint should be underlined while
   # the mouse with all `mouse.mods` keys held or the vi mode cursor is above it.
@@ -399,7 +481,7 @@ live_config_reload: true
   #   - MoveViModeCursor
   #       Move the vi mode cursor to the beginning of the hint.
   #enabled:
-  # - regex: "(mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)\
+  # - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)\
   #           [^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
   #   command: xdg-open
   #   post_processing: true

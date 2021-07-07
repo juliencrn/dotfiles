@@ -14,7 +14,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-export BREW=$(brew --prefix)
+export BREW=$(brew --prefix) # /opt/homebrew
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*

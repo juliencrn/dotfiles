@@ -55,3 +55,9 @@ nnoremap <leader>/ :TComment<CR>
 " Open new split panes to right and bottom
 set splitbelow
 set splitright
+
+" Color (Important to have right colors in tmux terminal)
+set termguicolors
+set term=xterm-256color
+set background=dark
+set t_Co=256

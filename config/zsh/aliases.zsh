@@ -26,7 +26,7 @@ alias grbm="git rebase master"
 alias grbi="git rebase -i"
 
 # Quick access to projects
-alias cc="cd ~/www/chefclub"
+alias cc="cd ~/www/chefclub.tv"
 alias df="cd ~/dotfiles"
 alias uh="cd ~/www/usehooks"
 
@@ -46,4 +46,3 @@ alias reload="source ~/.zshrc"
 # Suffix Alias
 # This follow will open VSCode when write filename using txt extension
 alias -s txt=code
-
