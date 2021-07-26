@@ -6,25 +6,22 @@
 
 ```
 
-            .-/+oossssoo+/-.               julien@linux 
-        `:+ssssssssssssssssss+:`           ------------ 
-      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 20.04.2 LTS x86_64 
-    .ossssssssssssssssssdMMMNysssso.       Kernel: 5.4.0-66-generic 
-   /ssssssssssshdmmNNmmyNMMMMhssssss/      Uptime: 14 hours, 40 mins 
-  +ssssssssshmydMMMMMMMNddddyssssssss+     Packages: 2441 (dpkg), 15 (snap) 
- /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Shell: zsh 5.8 
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Resolution: 1920x1080, 1920x1080, 1920x1080 
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+   WM: i3 
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso   Theme: Dracula [GTK3] 
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso   Icons: Papirus-Dark [GTK3] 
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+   Terminal: gnome-terminal 
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.   CPU: Intel i5-7600K (4) @ 4.200GHz 
- /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/    GPU: NVIDIA GeForce GTX 1050 
-  +sssssssssdmydMMMMMMMMddddyssssssss+     Memory: 7792MiB / 15959MiB 
-   /ssssssssssshdmNNNNmyNMMMMhssssss/
-    .ossssssssssssssssssdMMMNysssso.                               
-      -+sssssssssssssssssyyyssss+-                                 
-        `:+ssssssssssssssssss+:`
-            .-/+oossssoo+/-.
+                    'c.          juliencaron@Juliens-MacBook-Pro.local 
+                 ,xNMM.          ------------------------------------- 
+               .OMMMMo           OS: macOS 11.4 20F71 x86_64 
+               OMMM0,            Host: MacBookPro17,1 
+     .;loddo:' loolloddol;.      Kernel: 20.5.0 
+   cKMMMMMMMMMMNWMMMMMMMMMM0:    Uptime: 1 day, 16 hours, 4 mins 
+ .KMMMMMMMMMMMMMMMMMMMMMMMWd.    Packages: 116 (brew) 
+ XMMMMMMMMMMMMMMMMMMMMMMMX.      Shell: zsh 5.8 
+;MMMMMMMMMMMMMMMMMMMMMMMM:       Resolution: 1440x900, 1920x1080, 1920x1080, 1920x1080 
+:MMMMMMMMMMMMMMMMMMMMMMMM:       DE: Aqua 
+.MMMMMMMMMMMMMMMMMMMMMMMMX.      WM: Quartz Compositor 
+ kMMMMMMMMMMMMMMMMMMMMMMMMWd.    WM Theme: Blue (Dark) 
+ .XMMMMMMMMMMMMMMMMMMMMMMMMMMk   Terminal: vscode 
+  .XMMMMMMMMMMMMMMMMMMMMMMMMK.   CPU: Apple M1 
+    kMMMMMMMMMMMMMMMMMMMMMMd     GPU: Apple M1 
+     ;KMMMMMMMWXXWMMMMMMMk.      Memory: 2087MiB / 16384MiB 
+       .cooc,.    .,coo:.
 
 ```
