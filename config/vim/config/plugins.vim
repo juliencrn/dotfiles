@@ -12,6 +12,7 @@ call plug#begin("~/.vim/plugged")
     " UI 
     Plug 'dracula/vim'
     Plug 'vim-airline/vim-airline' 
+    " Plug 'dracula/dracula-theme'
 
     " Fuzzy search
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

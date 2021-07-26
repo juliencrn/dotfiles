@@ -17,7 +17,6 @@ syntax enable             " Enable syntax highlighting
 filetype plugin indent on " Enable indenting for plugins and files
 set autoindent            " Enable auto indenting
 set number                " Enable line number
-colorscheme dracula       " Set nice looking colorscheme
 set nobackup              " Disable backup files
 set nowritebackup         " Disable backup
 set laststatus=2          " Show status line
@@ -28,6 +27,9 @@ set spell                 " Enable spell checking (Default English)
 set cursorline            " Highlight current line
 set noswapfile            " Disable swapfiles too
 
+" Set nice looking colorscheme (after other colors settings)
+let g:dracula_colorterm = 0  
+
 if version >= 703
   set colorcolumn=+1      " Color the column after textwidth, usually the 80th
 endif
@@ -35,6 +37,9 @@ endif
 if (has("termguicolors"))
     set termguicolors     " ?
 endif 
+
+packadd! dracula
+colorscheme dracula 
 
 " use Crtl+hjkl to move between split/vsplit panels
 nnoremap <C-h> <C-w>h
@@ -55,9 +60,3 @@ nnoremap <leader>/ :TComment<CR>
 " Open new split panes to right and bottom
 set splitbelow
 set splitright
-
-" Color (Important to have right colors in tmux terminal)
-set termguicolors
-set term=xterm-256color
-set background=dark
-set t_Co=256
