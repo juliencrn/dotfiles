@@ -4,9 +4,13 @@
 # For a full list of active aliases, run `alias`.
 
 # Utils
-alias ls="colorls --sd"
-alias ll="ls -lah" # -l -> List | -a -> All | -r -> Reverse | T -> Sort -Time | -h -> Human size (Ko, Mo, Go)
+alias ls="exa --icons"
+alias ll="exa -lah --icons" # -l -> List | -a -> All | -r -> Reverse | T -> Sort -Time | -h -> Human size (Ko, Mo, Go)
+alias tree="exa --icons -T"
+alias cat='bat --theme="Dracula" --style="numbers,changes,header"'
 alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
+# alias ibrew='arch -x86_64'
+alias ps='procs'
 
 # Shortcuts
 alias svim="sudo vim"
@@ -28,7 +32,7 @@ alias grbi="git rebase -i"
 # Quick access to projects
 alias cc="cd ~/www/chefclub.tv"
 alias df="cd ~/dotfiles"
-alias uh="cd ~/www/usehooks"
+alias uh="cd ~/www/typescript/usehooks"
 
 # Tmux
 alias t="tmux"
