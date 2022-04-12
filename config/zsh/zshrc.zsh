@@ -27,6 +27,7 @@ plugins=( \
     zsh-interactive-cd \
     cargo \
     sudo \
+	history-substring-search
 )
 
 # Enable FZF Fuzzy Finder
@@ -57,6 +58,20 @@ fi
 if [ -f $BREW/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] ; then
     source $BREW/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+if [ -f $BREW/share/zsh-history-substring-search/zsh-history-substring-search.zsh	 ] ; then
+	source $BREW/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+fi
 
 # Rust - cargo
 [[ -f $HOME/.cargo/env ]] && source $HOME/.cargo/env
+
+# Pupperteer headless web browser
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=`which chromium`
+
+# Python
+export PATH=$HOME/Library/Python/3.8/bin:${PATH}
+
+# Golang
+export PATH=/usr/local/go/bin:${PATH}
+GOPATH="$HOME/go"

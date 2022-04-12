@@ -7,7 +7,7 @@
 alias ls="exa --icons"
 alias ll="exa -lah --icons" # -l -> List | -a -> All | -r -> Reverse | T -> Sort -Time | -h -> Human size (Ko, Mo, Go)
 alias tree="exa --icons -T"
-alias cat='bat --theme="Dracula" --style="numbers,changes,header"'
+alias cat='bat --theme="base16" --style="plain"'
 alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
 # alias ibrew='arch -x86_64'
 alias ps='procs'
@@ -42,6 +42,17 @@ alias tn="t new -t" # Create session
 
 # System
 alias reload="source ~/.zshrc"
+
+alias mongod='brew services run mongodb-community'
+alias mongod-status='brew services list'
+alias mongod-stop='brew services stop mongodb-community'
+
+# Clean up node_modules scoped in ~/www
+alias ls-node_modules="find . -name \"node_modules\" -type d -prune | xargs du -chs"
+alias rm-node_modules="find ~/www -name \"node_modules\" -type d -prune -exec rm -rf '{}' +"
+
+# dev
+alias npm-check="npx npm-check -u" 
 
 # Reword
 # alias calc='qalc'
