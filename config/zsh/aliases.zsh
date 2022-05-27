@@ -9,7 +9,7 @@ alias ll="exa -lah --icons" # -l -> List | -a -> All | -r -> Reverse | T -> Sort
 alias tree="exa --icons -T"
 alias cat='bat --theme="base16" --style="plain"'
 alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
-# alias ibrew='arch -x86_64'
+alias xbrew='arch -x86_64 /usr/local/homebrew/bin/brew'
 alias ps='procs'
 
 # Shortcuts
@@ -53,6 +53,13 @@ alias rm-node_modules="find ~/www -name \"node_modules\" -type d -prune -exec rm
 
 # dev
 alias npm-check="npx npm-check -u" 
+alias coin="cointop"
+alias top="gtop"
+alias matrix="python3 ~/www/python/matrix-rain/matrix_rain.py"
+#alias python="/opt/homebrew/bin/python3"
+alias pip="/opt/homebrew/bin/pip3"
+alias metaplex="npx ts-node ~/www/solana/metaplex/js/packages/cli/build/cli-nft.js"
+alias metaplex-candy-v2="npx ts-node ~/www/solana/metaplex/js/packages/cli/build/candy-machine-v2-cli.js"
 
 # Reword
 # alias calc='qalc'

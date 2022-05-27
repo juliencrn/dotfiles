@@ -14,27 +14,33 @@ DOT_CONFIG="$HOME/dotfiles/config"
 
 # Base
 symlink $DOT_CONFIG/.gitconfig $HOME/.gitconfig
+# symlink $DOT_CONFIG/zprofile $HOME/.zprofile
+
 
 # zsh (Shell)
 symlink $DOT_CONFIG/zsh/aliases.zsh $HOME/.aliases
-symlink $DOT_CONFIG/zsh/fzf.zsh $HOME/.fzf.zsh
 symlink $DOT_CONFIG/zsh/p10k.zsh $HOME/.p10k.zsh
-symlink $DOT_CONFIG/zsh/zshenv.zsh $HOME/.zshenv
 symlink $DOT_CONFIG/zsh/zshrc.zsh $HOME/.zshrc
-
-# vim (Editor)
-mkdir -p $HOME/.vim
-mkdir -p $HOME/.vim/config
-symlink $DOT_CONFIG/vim/vimrc.vim $HOME/.vimrc
-symlink $DOT_CONFIG/vim/config/explorer.vim $HOME/.vim/config/explorer.vim
-symlink $DOT_CONFIG/vim/config/plugins.vim $HOME/.vim/config/plugins.vim
-symlink $DOT_CONFIG/vim/config/ide.vim $HOME/.vim/config/ide.vim
-symlink $DOT_CONFIG/vim/config/search.vim $HOME/.vim/config/search.vim
-symlink $DOT_CONFIG/vim/coc-settings.json $HOME/.vim/coc-settings.json
+# symlink $DOT_CONFIG/zsh/fzf.zsh $HOME/.fzf.zsh
+# symlink $DOT_CONFIG/zsh/zshenv.zsh $HOME/.zshenv
 
 # Tmux (terminal multiplexer)
 symlink $DOT_CONFIG/tmux/tmux.conf $HOME/.tmux.conf
 
+# vim (Editor)
+# mkdir -p $HOME/.vim
+# mkdir -p $HOME/.vim/config
+# symlink $DOT_CONFIG/vim/vimrc.vim $HOME/.vimrc
+# symlink $DOT_CONFIG/vim/config/explorer.vim $HOME/.vim/config/explorer.vim
+# symlink $DOT_CONFIG/vim/config/plugins.vim $HOME/.vim/config/plugins.vim
+# symlink $DOT_CONFIG/vim/config/ide.vim $HOME/.vim/config/ide.vim
+# symlink $DOT_CONFIG/vim/config/search.vim $HOME/.vim/config/search.vim
+# symlink $DOT_CONFIG/vim/coc-settings.json $HOME/.vim/coc-settings.json
+
 # alacritty (Terminal)
-mkdir -p $CONFIG/alacritty
-symlink $DOT_CONFIG/alacritty/alacritty.yml $CONFIG/alacritty/alacritty.yml
+# mkdir -p $CONFIG/alacritty
+# symlink $DOT_CONFIG/alacritty/alacritty.yml $CONFIG/alacritty/alacritty.yml
+# rm $CONFIG/alacritty/alacritty.yml
+
+# Yabai (Window Manager)
+# symlink $DOT_CONFIG/yabai/yabai.sh $HOME/.yabairc
