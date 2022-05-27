@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Remove one-by-one each part of Docker content using the `prune` cmd. Let's get started!"
+
+docker builder prune
+docker container prune
+docker image prune
+docker network prune
+docker system prune
+docker volume prune
+
+echo "Doker is cleaned up"
